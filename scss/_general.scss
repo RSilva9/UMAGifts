@@ -1,0 +1,41 @@
+/* ELEMENTOS */
+nav{
+    background-color: map-get($map: $paleta, $key: secondary); 
+
+    img{
+        width: 3em;
+    }
+}
+
+body{
+    background-color: map-get($map: $paleta, $key: main);
+}
+
+a{
+    font-family: $secondaryFont;
+}
+
+h1{
+    font-family: $mainFont;
+    font-weight: 600;
+}
+
+/* IDs Y CLASES */
+.offcanvas{
+    background-color: map-get($map: $paleta, $key: secondary); 
+}
+
+.cCard{
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 10px;
+    background-color: white;
+    font-family: $secondaryFont;
+    text-align: center;
+    img{
+        padding: 30px;
+    }
+}
+
+#prodRow{
+    @include flex(row, space-between, center, nowrap);
+}

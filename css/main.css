@@ -1,0 +1,44 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap"); /* ELEMENTOS */
+nav {
+  background-color: #e4d3c0;
+}
+nav img {
+  width: 3em;
+}
+
+body {
+  background-color: #ffe7cb;
+}
+
+a {
+  font-family: "Source Sans Pro", sans-serif;
+}
+
+h1 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+}
+
+/* IDs Y CLASES */
+.offcanvas {
+  background-color: #e4d3c0;
+}
+
+.cCard {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  font-family: "Source Sans Pro", sans-serif;
+  text-align: center;
+}
+.cCard img {
+  padding: 30px;
+}
+
+#prodRow {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: nowrap;
+}/*# sourceMappingURL=main.css.map */
