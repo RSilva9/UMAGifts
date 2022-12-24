@@ -7,6 +7,24 @@ nav{
     }
 }
 
+footer{
+    @include flex(row, space-around, flex-start, wrap);
+    padding: 15px 0px;
+    background-color: map-get($map: $paleta, $key: secondary); 
+    a{
+        font-size: 1.2em;
+    }
+
+    p{
+        font-family: $secondaryFont;
+        font-size: 1.2em;
+    }
+
+    img{
+        width: 1.3em;
+        margin-right: 5px;
+    }
+}
 
 body{
     background-color: map-get($map: $paleta, $key: main);
@@ -14,6 +32,13 @@ body{
 
 a{
     font-family: $secondaryFont;
+    text-decoration: none;
+    cursor: pointer;
+    color: black;
+}
+
+a:hover{
+    color: black;
 }
 
 h1{
@@ -21,6 +46,10 @@ h1{
     font-weight: 600;
 }
 
+h3{
+    font-family: $mainFont;
+    font-size: 1.4em;
+}
 
 /* IDs Y CLASES */
 .offcanvas{
@@ -32,13 +61,16 @@ h1{
     border-radius: 10px;
     background-color: white;
     font-family: $secondaryFont;
-    text-align: center;
     margin: 5px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
     img{
         padding: 10px;
         border-radius: 20px;
+        width: 95%;
     }
-    button{
+    a{
         margin-bottom: 5px;
     }
 }
@@ -48,16 +80,13 @@ h1{
     border: 1px solid map-get($map: $paleta, $key: darkPurple);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     font-family: $mainFont;
-    font-size: 1em;
+    font-size: 100%;
     border-radius: 5px;
     transition: 0.3s;
+    padding: 3px;
 }
 
 .buttn:hover{
     background-color: map-get($map: $paleta, $key: lighterPurple);
+    color: black;
 }
-
-// #prodRow{
-//     @include flex(row, space-between, center, nowrap);
-
-// }

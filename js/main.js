@@ -1,4 +1,4 @@
-const buttons = document.getElementsByClassName("buttn")
+const buttons = document.getElementsByClassName("btnProds")
 const cards = document.getElementsByClassName("popup")
 
 for(let btn of buttons){

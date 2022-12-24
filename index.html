@@ -7,11 +7,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/animate.css">
     <title>UMA GIFTS - Box de vinos, espumantes y delicatessen para tu regalo.</title>
 </head>
 
 <body>
     <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <script src="js/wow.min.js"></script>
+    <script>
+    new WOW().init();
+    </script>
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
@@ -29,7 +34,10 @@
                 </div>
                 <div class="offcanvas-body">
                     <div class="navbar-nav">
-                        <a class="nav-link active" aria-current="page" href="#">Inicio</a>
+                        <a class="nav-link active" aria-current="page" href="index.html">Inicio</a>
+                    </div>
+                    <div class="navbar-nav">
+                        <a class="nav-link active" aria-current="page" href="#">Productos</a>
                     </div>
                 </div>
             </div>
@@ -56,57 +64,88 @@
     <h1 class="text-center m-4">Disfrutá regalar</h1>
 
     <section class="container-fluid d-flex flex-column flex-md-row" id="prodRow">
-        
+
         <div class="d-flex flex-row">
-            <div class="cCard">
-                <img src="img/box/box110.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <button class="buttn" data-name=110>Ver más</button>
-                </div>
+            <div class="cCard wow fadeInDown" data-wow-delay="0.2s">
+                <img src="img/box/box110.webp" alt="...">
+                <a class="buttn btnProds" data-name=110>Ver más</a>
             </div>
-    
-            <div class="cCard">
-                <img src="img/box/box114.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <button class="buttn" data-name=114>Ver más</button>
-                </div>
+
+            <div class="cCard wow fadeInDown" data-wow-delay="0.4s">
+                <img src="img/box/box114.webp" alt="...">
+                <a class="buttn btnProds" data-name=114>Ver más</a>
             </div>
         </div>
 
         <div class="d-flex flex-row">
-            <div class="cCard">
-                <img src="img/box/box116.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <button class="buttn" data-name=116>Ver más</button>
-                </div>
+            <div class="cCard wow fadeInDown" data-wow-delay="0.6s">
+                <img src="img/box/box116.webp" alt="...">
+                <a class="buttn btnProds" data-name=116>Ver más</a>
             </div>
-    
-            <div class="cCard">
-                <img src="img/box/box121.webp" class="card-img-top" alt="...">
-                <div class="card-body">
-                    <button class="buttn" data-name=121>Ver más</button>
-                </div>
+
+            <div class="cCard wow fadeInDown" data-wow-delay="0.8s">
+                <img src="img/box/box121.webp" alt="...">
+                <a class="buttn btnProds" data-name=121>Ver más</a>
             </div>
         </div>
+
     </section>
+
+    <div class="text-center mt-3 mb-4">
+        <a href="#" class="buttn">Ver todos los productos</a>
+    </div>
+
+    <footer>
+        <section class="d-flex flex-column">
+            <h3>Navegación</h3>
+            <a href="index.html">Inicio</a>
+            <a href="#">Productos</a>
+        </section>
+        <section class="d-flex flex-column">
+            <h3>Contacto</h3>
+            <div class="d-flex">
+                <img src="img/icons/whatsapp.webp" alt="logo WhatsApp" class="my-auto">
+                <a href="https://api.whatsapp.com/send/?phone=5491165325333&text=¡Hola%21+Me+gustaría+realizar+un+pedido.&type=phone_number&app_absent=0"
+                    class="my-auto">WhatsApp</a>
+            </div>
+            <div class="d-flex">
+                <img src="img/icons/phone.webp" alt="logo teléfono" class="my-auto">
+                <p class="my-auto">+54 9 11 6532-5333</p>
+            </div>
+        </section>
+        <section class="d-flex flex-column">
+            <h3>Redes Sociales</h3>
+            <div class="d-flex">
+                <img src="img/icons/instagram.webp" alt="logo Instagram" class="my-auto">
+                <a href="https://www.instagram.com/uma.gifts/" class="my-auto">Instagram</a>
+            </div>
+            <div class="d-flex">
+                <img src="img/icons/facebook.webp" alt="logo Facebook" class="my-auto">
+                <a href="https://www.facebook.com/umagiftsfb/" class="my-auto">Facebook</a>
+            </div>
+        </section>
+    </footer>
 
     <!-- INFO CARDS -->
     <div class="d-none popup">
 
-        <div class="popup" data-name=110 data-link='https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1261856346-regaloempresarial-vino-escorihuelagascon-malbec-luigibosca-_JM#position=3&search_layout=stack&type=item&tracking_id=47bee92a-d449-4a88-af3e-003a7415730f'>
+        <div class="popup" data-name=110
+            data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1261856346-regaloempresarial-vino-escorihuelagascon-malbec-luigibosca-_JM#position=3&search_layout=stack&type=item&tracking_id=47bee92a-d449-4a88-af3e-003a7415730f">
             <img src="img/box/box110.webp" alt="...">
-            <h2>CAJA DE CARTÓN DOBLE</h2>
+            <h2>CAJA DE MADERA DOBLE</h2>
             <h3>+1 ESCORIHUELA GASCÓN Malbec</h3>
             <h3>+1 LUIGI BOSCA Malbec</h3>
         </div>
 
-        <div class="popup" data-name=114 data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1262697806-regalos-empresariales-espumante-nieto-senetiner-extra-brut-_JM#position=1&search_layout=stack&type=item&tracking_id=1fe46881-30ef-426d-84c1-f20e614d6c05">
+        <div class="popup" data-name=114
+            data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1262697806-regalos-empresariales-espumante-nieto-senetiner-extra-brut-_JM#position=1&search_layout=stack&type=item&tracking_id=1fe46881-30ef-426d-84c1-f20e614d6c05">
             <img src="img/box/box114.webp" alt="...">
             <h2>CAJA DE MADERA SIMPLE</h2>
             <h3>+1 NIETO SENETINER Extra Brut</h3>
         </div>
 
-        <div class="popup" data-name=116 data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264818401-vino-salentein-malbec-delicatessen-estuche-madera-regalo-_JM#position=1&search_layout=stack&type=item&tracking_id=47bee92a-d449-4a88-af3e-003a7415730f">
+        <div class="popup" data-name=116
+            data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264818401-vino-salentein-malbec-delicatessen-estuche-madera-regalo-_JM#position=1&search_layout=stack&type=item&tracking_id=47bee92a-d449-4a88-af3e-003a7415730f">
             <img src="img/box/box116.webp" alt="...">
             <h2>CAJA DE MADERA DOBLE</h2>
             <h3>+1 SALENTEIN Malbec</h3>
@@ -115,7 +154,8 @@
             <h3>+1 Mermelada orgánica de Saúco - Cuyen</h3>
         </div>
 
-        <div class="popup" data-name=121 data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264895544-vino-trumpeter-en-estuche-de-carton-regalos-empresariales-_JM#position=11&search_layout=stack&type=item&tracking_id=47bee92a-d449-4a88-af3e-003a7415730f">
+        <div class="popup" data-name=121
+            data-link="https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264895544-vino-trumpeter-en-estuche-de-carton-regalos-empresariales-_JM#position=11&search_layout=stack&type=item&tracking_id=47bee92a-d449-4a88-af3e-003a7415730f">
             <img src="img/box/box121.webp" alt="...">
             <h2>CAJA DE CARTÓN SIMPLE</h2>
             <h3>+1 TRUMPETER Malbec</h3>
@@ -123,8 +163,6 @@
 
     </div>
 
-
-    
     <!-- INFO CARDS -->
 
 
