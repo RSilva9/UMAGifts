@@ -1,0 +1,22 @@
+.popup{
+
+    h2{
+        font-family: $mainFont;
+        font-weight: 600;
+        font-size: 1.3em;
+        text-align: center;
+    }
+
+    h3{
+        font-family: $mainFont;
+        font-weight: 400;
+        font-size: 1.1em;
+        text-align: start;
+        padding: 0px 50px;
+    }
+
+    img{
+        padding: 15px;
+        width: 85%;
+    }
+}
