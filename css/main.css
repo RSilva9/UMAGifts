@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap"); /* ELEMENTOS */
 nav {
-  background-color: #e4d3c0;
+  background-color: #dfbb92;
 }
 nav img {
   width: 3em;
@@ -13,7 +13,7 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 15px 0px;
-  background-color: #e4d3c0;
+  background-color: #dfbb92;
 }
 footer a {
   font-size: 1.2em;
@@ -54,7 +54,7 @@ h3 {
 
 /* IDs Y CLASES */
 .offcanvas {
-  background-color: #e4d3c0;
+  background-color: #dfbb92;
 }
 
 .cCard {
@@ -126,5 +126,10 @@ h3 {
   }
   footer section {
     margin: 10px 0px;
+  }
+}
+@media (min-width: 769px) {
+  #contentBlock {
+    margin: 1% 10%;
   }
 }/*# sourceMappingURL=main.css.map */
