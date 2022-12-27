@@ -20,7 +20,7 @@
 
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
-            <a class="navbar-brand" href="#">
+            <a class="navbar-brand" href="index.html">
                 <img src="img/logoUmaNegro.png" alt="Logo UMA">
             </a>
             <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar"
@@ -45,18 +45,111 @@
     </nav>
 
     <div id="contentBlock">
-    
-    <button id="test">PRUEBA</button>
-    <section>
-        <div class="row" id="cardCont">
-            
-           
-
-        </div>
-    </section>
         
+        <section class="bg-white d-md-flex flex-row">
 
+            <div class="accordion d-block d-md-none" id="accordionExample">
+                <div class="accordion-item">
+                    <h2 class="accordion-header" id="headingOne">
+                        <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                            data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            <div class="filtros">
+                                <h2>Filtros</h2>
+                            </div>
+                        </button>
+                    </h2>
+                    <div id="collapseOne" class="accordion-collapse collapse" aria-labelledby="headingOne"
+                        data-bs-parent="#accordionExample">
+                        <div class="accordion-body">
+                            <div class="d-md-flex bg-white">
+                                <div class="p-2" id="filtros">
+                                    <h2>Filtros</h2>
+                                    <div class="p-1">
+                                        <button class="buttn" id="bReset">Restablecer filtros</button>
+                                    </div>
+                                    <h3>Tipo de box</h3>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="tipo" id="madera">
+                                            Caja de madera
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="tipo" id="carton">
+                                            Caja de cartón
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="tipo" id="bolsa">
+                                            Bolsa de cartón
+                                        </li>
+                                    </ul>
+                                    <h3>Tamaño</h3>
+                                    <ul>
+                                        <li>
+                                            <input type="radio" name="tam" id="simple">
+                                            Simple
+                                        </li>
+                                        <li>
+                                            <input type="radio" name="tam" id="doble">
+                                            Doble
+                                        </li>
+                                    </ul>
+                                    <div>
+                                        <h4>Con delicatessen</h4>
+                                        <input type="checkbox" name="del" id="deli" class="mx-3">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="p-2 d-none d-md-block" id="filtros">
+                <h2>Filtros</h2>
+                <div class="p-1">
+                    <button class="buttn" id="bReset">Restablecer filtros</button>
+                </div>
+                <h3>Tipo de box</h3>
+                <ul>
+                    <li>
+                        <input type="radio" name="tipo" id="madera">
+                        Caja de madera
+                    </li>
+                    <li>
+                        <input type="radio" name="tipo" id="carton">
+                        Caja de cartón
+                    </li>
+                    <li>
+                        <input type="radio" name="tipo" id="bolsa">
+                        Bolsa de cartón
+                    </li>
+                </ul>
+                <h3>Tamaño</h3>
+                <ul>
+                    <li>
+                        <input type="radio" name="tam" id="simple">
+                        Simple
+                    </li>
+                    <li>
+                        <input type="radio" name="tam" id="doble">
+                        Doble
+                    </li>
+                </ul>
+                <div>
+                    <h4>Con delicatessen</h4>
+                    <input type="checkbox" name="del" id="deli" class="mx-3">
+                </div>
+            </div>
+
+            <div class="row m-1" id="cardCont">
+
+            </div>
+
+        </section>
+        
     </div>
+
+    
 
     <footer>
         <section class="d-flex flex-column">
@@ -92,4 +185,5 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script src="js/main.js"></script>
 </body>
+
 </html>

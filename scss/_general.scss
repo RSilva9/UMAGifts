@@ -78,7 +78,7 @@ h3{
 .buttn{
     background-color: map-get($map: $paleta, $key: lightPurple);
     border: 1px solid map-get($map: $paleta, $key: darkPurple);
-    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103);
     font-family: $mainFont;
     font-size: 100%;
     border-radius: 5px;
@@ -89,4 +89,23 @@ h3{
 .buttn:hover{
     background-color: map-get($map: $paleta, $key: lighterPurple);
     color: black;
+}
+
+#filtros{
+    min-width: 20%;
+    h2{
+        font-family: $mainFont;
+    }
+    h4{
+        font-family: $mainFont;
+        font-size: 1.2em;
+    }
+    ul{
+        list-style: none;
+        margin-top: 0;
+        padding-left: 15px;
+    }
+    button{
+        margin: 10px 0px;
+    }
 }

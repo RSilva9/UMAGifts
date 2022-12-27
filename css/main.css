@@ -77,9 +77,9 @@ h3 {
 }
 
 .buttn {
-  background-color: #a94d7c;
+  background-color: #e46ba3;
   border: 1px solid #70225e;
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103);
   font-family: "Poppins", sans-serif;
   font-size: 100%;
   border-radius: 5px;
@@ -88,8 +88,27 @@ h3 {
 }
 
 .buttn:hover {
-  background-color: #ec6cae;
+  background-color: #f372b5;
   color: black;
+}
+
+#filtros {
+  min-width: 20%;
+}
+#filtros h2 {
+  font-family: "Poppins", sans-serif;
+}
+#filtros h4 {
+  font-family: "Poppins", sans-serif;
+  font-size: 1.2em;
+}
+#filtros ul {
+  list-style: none;
+  margin-top: 0;
+  padding-left: 15px;
+}
+#filtros button {
+  margin: 10px 0px;
 }
 
 .popup h2 {
