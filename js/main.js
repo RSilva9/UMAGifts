@@ -1,25 +1,3 @@
-// const cards = document.querySelectorAll(".cardd")
-
-// for(let i=0; i<3; i+=1){
-//     if(window.innerWidth < 768){
-//         cards[0].setAttribute('id','cardCont')
-//     }else if(window.innerWidth >= 768){
-//         cards[1].setAttribute('id','cardCont')
-//     }
-// }
-
-// window.onresize = ()=>{
-//     for(let i=0; i<3; i+=1){
-//         if(window.innerWidth < 768){
-//             cards[0].setAttribute('id','cardCont')
-//             cards[1].removeAttribute('id','cardCont')
-//         }else if(window.innerWidth >= 768){
-//             cards[0].removeAttribute('id','cardCont')
-//             cards[1].setAttribute('id','cardCont')
-//         }
-//     }
-// }
-
 let container = document.querySelector("#cardCont")
 
 function renderAll() {
@@ -50,6 +28,11 @@ function renderAll() {
 
 if (window.location.pathname == '/productos.html') {
     renderAll()
+}
+
+if(window.innerWidth >= 768){
+    let acc = document.querySelector(".accordion-collapse")
+    acc.classList += "show"
 }
 
 const SwalBtns = (buttons) => {
@@ -144,6 +127,18 @@ deli.addEventListener('change', () => {
 
 for (let t of tipo) {
     t.addEventListener('change', () => {
+        console.log(t.id)
+        if(t.id == "bolsa"){
+            for(let tm of tam){
+                tm.checked = false
+                tm.disabled= true
+            }
+        }else{
+            for(let tm of tam){
+                tm.checked = false
+                tm.disabled= false
+            }
+        }
         if (t.checked)
             tipYtam(t)
     })
