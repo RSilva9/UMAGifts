@@ -93,7 +93,7 @@ h3 {
 }
 
 #filtros {
-  min-width: 20%;
+  padding: 10px;
 }
 #filtros h2 {
   font-family: "Poppins", sans-serif;
@@ -105,10 +105,13 @@ h3 {
 #filtros ul {
   list-style: none;
   margin-top: 0;
-  padding-left: 15px;
+  padding-left: 10px;
+}
+#filtros ul li {
+  margin: 8px 0px;
 }
 #filtros button {
-  margin: 10px 0px;
+  margin-bottom: 15px;
 }
 
 .popup h2 {
@@ -150,5 +153,8 @@ h3 {
 @media (min-width: 769px) {
   #contentBlock {
     margin: 1% 10%;
+  }
+  #filtros {
+    padding: 0px;
   }
 }/*# sourceMappingURL=main.css.map */

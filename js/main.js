@@ -67,16 +67,7 @@ let deli = document.getElementById("deli")
 let btnReset = document.getElementById("bReset")
 
 btnReset.onclick = () => {
-    for (let t of tipo) {
-        t.disabled = false
-        t.checked = false
-    }
-    for (let tm of tam) {
-        tm.disabled = false
-        tm.checked = false
-    }
-    deli.checked = false
-    renderAll()
+    window.location.reload()
 }
 
 deli.addEventListener('change', () => {
@@ -115,13 +106,7 @@ deli.addEventListener('change', () => {
             })
 
     } else {
-        for (let t of tipo) {
-            t.disabled = false
-        }
-        for (let tm of tam) {
-            tm.disabled = false
-        }
-        renderAll()
+        window.location.reload()
     }
 })
 
