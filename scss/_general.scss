@@ -62,9 +62,8 @@ h3{
     background-color: white;
     font-family: $secondaryFont;
     margin: 5px;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    @include flex(column, center, center, nowrap);
+
     img{
         padding: 10px;
         border-radius: 20px;
@@ -73,6 +72,20 @@ h3{
     a{
         margin-bottom: 5px;
     }
+    h2{
+        font-family: $secondaryFont;
+        font-size: 1.2em;
+        cursor: default;
+    }
+}
+
+.accGrid{
+    display: grid;
+    grid-template-columns: repeat(4,1fr);
+    grid-template-rows: auto;
+    grid-gap: 1rem;
+
+    text-align: center;
 }
 
 .buttn{
@@ -89,6 +102,11 @@ h3{
 .buttn:hover{
     background-color: map-get($map: $paleta, $key: lighterPurple);
     color: black;
+}
+
+.cardHover:hover{
+    background-color: rgb(223, 223, 223);
+    transition-duration: 0.3s;
 }
 
 #filtros{
