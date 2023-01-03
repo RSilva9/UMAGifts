@@ -317,7 +317,7 @@ btnEnd.addEventListener("click", ()=>{
             <h3>${cajaFinal.bebida.vinoUno}</h3>
             </div>
     
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-column flex-md-row">
             <h3 class="me-1 fw-bold">Delicatessen:</h3>
                 <div>
                 <h3>○ ${cajaFinal.deli.deliUno}</h3>
@@ -343,7 +343,7 @@ btnEnd.addEventListener("click", ()=>{
             <h3>${cajaFinal.bebida.vinoUno}</h3>
             </div>
     
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-column flex-md-row">
             <h3 class="me-1 fw-bold">Delicatessen:</h3>
                 <div>
                 <h3>○ ${cajaFinal.deli.deliUno}</h3>
@@ -368,7 +368,7 @@ btnEnd.addEventListener("click", ()=>{
             <h3>${cajaFinal.bebida.vinoUno}</h3>
             </div>
     
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-column flex-md-row">
             <h3 class="me-1 fw-bold">Delicatessen:</h3>
                 <div>
                 <h3>○ ${cajaFinal.deli.deliUno}</h3>
@@ -392,7 +392,7 @@ btnEnd.addEventListener("click", ()=>{
             <h3>${cajaFinal.bebida.vinoUno}</h3>
             </div>
     
-            <div class="d-flex flex-row">
+            <div class="d-flex flex-column flex-md-row">
             <h3 class="me-1 fw-bold">Delicatessen:</h3>
                 <div>
                 <h3>○ ${cajaFinal.deli.deliUno}</h3>
