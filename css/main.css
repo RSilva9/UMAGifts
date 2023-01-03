@@ -116,6 +116,14 @@ h3 {
   background-color: yellow;
 }
 
+.cfSwal {
+  text-align: start;
+  word-break: normal;
+}
+.cfSwal h2 {
+  text-align: center;
+}
+
 #filtros {
   padding: 10px;
 }
@@ -156,11 +164,6 @@ h3 {
   width: 85%;
 }
 
-@media (max-width: 375px) {
-  .popup h3 {
-    padding: 0px;
-  }
-}
 @media (max-width: 525px) {
   footer {
     display: flex;
