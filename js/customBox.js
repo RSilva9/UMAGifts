@@ -6,6 +6,19 @@ let accCajas = document.querySelector("#accCajas")
 let accVinos = document.querySelector("#accVinos")
 let accDelis = document.querySelector("#accDelis")
 
+const cajaFinal = {
+    estuche: "",
+    bebida: {
+        vinoUno: "",
+        vinoDos: ""
+    },
+    deli: {
+        deliUno: "",
+        deliDos: "",
+        deliTres: ""
+    }
+}
+
 renderProds()
 
 function renderProds() {
@@ -21,7 +34,8 @@ function renderProds() {
                     let cards = document.createElement("div")
                     cards.innerHTML =
                     `
-                    <div class="cCard h-100 p-2 cardHover">
+                    <div class="cCard h-100 pb-3 px-2 cardHover" id="caja" data-tam=${item.tam}>
+                    <input id="cajaInput" type="radio" name="caja" class="stretched-link">
                     <img src="${item.img}" alt="...">
                     <h2>${item.nombre}</h2>
                     </div>
@@ -32,7 +46,8 @@ function renderProds() {
                     let cards = document.createElement("div")
                     cards.innerHTML =
                     `
-                    <div class="cCard h-100 p-2 cardHover">
+                    <div class="cCard h-100 pb-3 px-2 cardHover" id="vino">
+                    <input id="cajaInput" type="checkbox" name="vino" class="stretched-link">
                     <img src="${item.img}" alt="...">
                     <h2>${item.nombre}</h2>
                     </div>
@@ -43,7 +58,8 @@ function renderProds() {
                     let cards = document.createElement("div")
                     cards.innerHTML =
                     `
-                    <div class="cCard h-100 p-2 cardHover">
+                    <div class="cCard h-100 pb-3 px-2 cardHover" id="deli">
+                    <input id="cajaInput" type="checkbox" name="deli" class="stretched-link">
                     <img src="${item.img}" alt="...">
                     <h2>${item.nombre}</h2>
                     </div>
@@ -51,5 +67,105 @@ function renderProds() {
                     accDelis.append(cards)
                 }
             }
+        })  
+}
+
+setTimeout(() => {
+    const cajas = document.getElementsByName("caja")
+    const vinos = document.getElementsByName("vino")
+    const delics = document.getElementsByName("deli")
+    listener(cajas, vinos, delics)
+}, 500);
+
+
+
+const checker = (arr)=>{
+    for(let a of arr){
+        if(!(a.checked)){
+            a.parentElement.classList.remove("cardColorCheck")
+        }
+    }
+}
+
+const listener = (cajas, vinos, delics)=>{
+    
+    var checkeadas = []
+
+    for(let c of cajas){       
+
+        c.addEventListener("change", ()=>{
+            if(c.checked){
+                c.parentElement.classList.add("cardColorCheck")
+                cajaFinal.estuche = c.parentElement.childNodes[5].textContent
+                if(c.parentElement.dataset.tam == "simple"){
+                    for(let v of vinos){
+                        v.type = "radio"
+                        checkeadas = []
+                        checker(vinos)
+                        checker(cajas)
+                    }
+                }else
+                if(c.parentElement.dataset.tam == "doble"){
+                    for(let v of vinos){
+                        v.type = "checkbox"
+                    }
+                }
+            }
+            checker(cajas)
         })
+    }
+
+    for(let v of vinos){
+        var limit = 2
+        
+        v.addEventListener("change", ()=>{
+            if(v.checked){
+                if(checkeadas.length < limit){
+                    v.parentElement.classList.add("cardColorCheck")
+                    if(v.type == "checkbox"){
+                        checkeadas.push(v)
+                        if(cajaFinal.bebida.vinoUno == ""){
+                            cajaFinal.bebida.vinoUno = v.parentElement.childNodes[5].textContent
+                        }else{
+                            cajaFinal.bebida.vinoDos = v.parentElement.childNodes[5].textContent
+                        }
+                    }else
+                    if(v.type == "radio"){
+                        cajaFinal.bebida = v.parentElement.childNodes[5].textContent
+                    }
+                    
+                }else{
+                    v.checked = false
+                }
+            }else{
+                checkeadas.pop(v)
+                if(cajaFinal.bebida.vinoDos == v.parentElement.childNodes[5].textContent){
+                    cajaFinal.bebida.vinoDos = ""
+                }else
+                if(cajaFinal.bebida.vinoUno == v.parentElement.childNodes[5].textContent){
+                    cajaFinal.bebida.vinoUno = cajaFinal.bebida.vinoDos
+                    cajaFinal.bebida.vinoDos = ""
+                }
+            }
+            console.log(cajaFinal)
+            checker(vinos)
+            RenderCajaFinal(checkeadas)
+        })
+    }
+}
+
+function RenderCajaFinal(checkeadas){
+    let cfContainer = document.getElementById("cajaFinalContainer")
+    if(checkeadas.length == 2){
+        cfContainer.innerHTML=`
+        <h3>Estuche: ${cajaFinal.estuche}</h3>
+        <h3>Bebidas: ${cajaFinal.bebida.vinoUno}, <br>${cajaFinal.bebida.vinoDos}</h3>
+        `
+    }else{
+        cfContainer.innerHTML=`
+        <h3>Estuche: ${cajaFinal.estuche}</h3>
+        <h3>Bebida: ${cajaFinal.bebida}</h3>
+        `
+    }
+    
 }

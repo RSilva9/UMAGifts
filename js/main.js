@@ -112,7 +112,6 @@ deli.addEventListener('change', () => {
 
 for (let t of tipo) {
     t.addEventListener('change', () => {
-        console.log(t.id)
         if(t.id == "bolsa"){
             for(let tm of tam){
                 tm.checked = false

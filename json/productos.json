@@ -51,31 +51,36 @@
         "nombre": "Bolsa de cartón",
         "codigo": 201,
         "img": "./img/productos/estuches/bolsaCarton.webp",
-        "tipo": "estuche"
+        "tipo": "estuche",
+        "tam": "simple"
     },
     {
         "nombre": "Estuche de cartón simple",
         "codigo": 202,
         "img": "./img/productos/estuches/cartonSimple.webp",
-        "tipo": "estuche"
+        "tipo": "estuche",
+        "tam": "simple"
     },
     {
         "nombre": "Estuche de cartón doble",
         "codigo": 203,
         "img": "./img/productos/estuches/cartonDoble.webp",
-        "tipo": "estuche"
+        "tipo": "estuche",
+        "tam": "doble"
     },
     {
         "nombre": "Estuche de madera simple",
         "codigo": 204,
         "img": "./img/productos/estuches/maderaSimple.webp",
-        "tipo": "estuche"
+        "tipo": "estuche",
+        "tam": "simple"
     },
     {
         "nombre": "Estuche de madera doble",
         "codigo": 205,
         "img": "./img/productos/estuches/maderaDoble.webp",
-        "tipo": "estuche"
+        "tipo": "estuche",
+        "tam": "doble"
     },
     {
         "nombre": "Aceitunas verdes rellenas con pasta de pimiento",
