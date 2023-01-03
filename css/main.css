@@ -80,7 +80,7 @@ h3 {
   cursor: default;
 }
 .cCard input {
-  opacity: 100;
+  opacity: 0;
 }
 
 .accGrid {

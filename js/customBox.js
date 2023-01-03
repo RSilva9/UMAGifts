@@ -34,7 +34,7 @@ function renderProds() {
                     let cards = document.createElement("div")
                     cards.innerHTML =
                     `
-                    <div class="cCard h-100 pb-3 px-2 cardHover" id="caja" data-tam=${item.tam}>
+                    <div class="cCard h-100 pb-3 px-2" id="caja" data-tam=${item.tam}>
                     <input id="cajaInput" type="radio" name="caja" class="stretched-link">
                     <img src="${item.img}" alt="...">
                     <h2>${item.nombre}</h2>
@@ -46,7 +46,7 @@ function renderProds() {
                     let cards = document.createElement("div")
                     cards.innerHTML =
                     `
-                    <div class="cCard h-100 pb-3 px-2 cardHover" id="vino">
+                    <div class="cCard h-100 pb-3 px-2" id="vino">
                     <input id="cajaInput" type="checkbox" name="vino" class="stretched-link">
                     <img src="${item.img}" alt="...">
                     <h2>${item.nombre}</h2>
@@ -58,7 +58,7 @@ function renderProds() {
                     let cards = document.createElement("div")
                     cards.innerHTML =
                     `
-                    <div class="cCard h-100 pb-3 px-2 cardHover" id="deli">
+                    <div class="cCard h-100 pb-3 px-2" id="deli">
                     <input id="cajaInput" type="checkbox" name="deli" class="stretched-link">
                     <img src="${item.img}" alt="...">
                     <h2>${item.nombre}</h2>
