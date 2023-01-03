@@ -1,11 +1,3 @@
-@media (max-width: 375px){
-    .popup{
-        h3{
-            padding: 0px;
-        }
-    }
-}
-
 @media (max-width: 525px){
     footer{
         @include flex(column, space-around, start, nowrap);
