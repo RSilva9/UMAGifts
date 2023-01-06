@@ -1,3 +1,4 @@
+export let boxStock = 
 [
     {
         "codigo": "101",
@@ -225,3 +226,4 @@
         "deli": false
     }
 ]
+

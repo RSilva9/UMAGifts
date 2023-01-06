@@ -9,6 +9,8 @@ let accDelis = document.querySelector("#accDelis")
 let btnEnd = document.getElementById("btnEnd")
 var checkeadas = []
 
+import { prodStock } from "./stocks/productos.js"
+
 const cajaFinal = {
     estuche: "",
     bebida: {
@@ -32,56 +34,50 @@ function renderProds() {
     accVinos.innerHTML = ""
     accDelis.innerHTML = ""
 
-    fetch("./json/productos.json")
-        .then((res) => res.json())
-        .then((items) => {
-            for (let item of items) {    
-                if(item.tipo == "estuche"){
-                    let cards = document.createElement("div")
-                    cards.innerHTML =
-                    `
-                    <div class="cCard h-100 pb-3 px-2" id="caja" data-tam=${item.tam}>
-                    <input id="cajaInput" type="radio" name="caja" class="stretched-link">
-                    <img src="${item.img}" alt="...">
-                    <h2>${item.nombre}</h2>
-                    </div>
-                    `
-                    accCajas.append(cards)
-                }
-                if(item.tipo == "bebida"){
-                    let cards = document.createElement("div")
-                    cards.innerHTML =
-                    `
-                    <div class="cCard h-100 pb-3 px-2" id="vino">
-                    <input id="cajaInput" type="checkbox" name="vino" class="stretched-link">
-                    <img src="${item.img}" alt="...">
-                    <h2>${item.nombre}</h2>
-                    </div>
-                    `
-                    accVinos.append(cards)
-                }
-                if(item.tipo == "deli"){
-                    let cards = document.createElement("div")
-                    cards.innerHTML =
-                    `
-                    <div class="cCard h-100 pb-3 px-2" id="deli" data-size=${item.size}>
-                    <input id="cajaInput" type="checkbox" name="deli" class="stretched-link" data-code=${item.codigo}>
-                    <img src="${item.img}" alt="...">
-                    <h2>${item.nombre}</h2>
-                    </div>
-                    `
-                    accDelis.append(cards)
-                }
-            }
-        })  
+    prodStock.forEach((item)=>{
+        if(item.tipo == "estuche"){
+            let cards = document.createElement("div")
+            cards.innerHTML =
+            `
+            <div class="cCard h-100 pb-3 px-2" id="caja" data-tam=${item.tam}>
+            <input id="cajaInput" type="radio" name="caja" class="stretched-link">
+            <img src="${item.img}" alt="...">
+            <h2>${item.nombre}</h2>
+            </div>
+            `
+            accCajas.append(cards)
+        }
+        if(item.tipo == "bebida"){
+            let cards = document.createElement("div")
+            cards.innerHTML =
+            `
+            <div class="cCard h-100 pb-3 px-2" id="vino">
+            <input id="cajaInput" type="checkbox" name="vino" class="stretched-link">
+            <img src="${item.img}" alt="...">
+            <h2>${item.nombre}</h2>
+            </div>
+            `
+            accVinos.append(cards)
+        }
+        if(item.tipo == "deli"){
+            let cards = document.createElement("div")
+            cards.innerHTML =
+            `
+            <div class="cCard h-100 pb-3 px-2" id="deli" data-size=${item.size}>
+            <input id="cajaInput" type="checkbox" name="deli" class="stretched-link" data-code=${item.codigo}>
+            <img src="${item.img}" alt="...">
+            <h2>${item.nombre}</h2>
+            </div>
+            `
+            accDelis.append(cards)
+        }
+    })
 }
 
-setTimeout(() => {
-    const cajas = document.getElementsByName("caja")
-    const vinos = document.getElementsByName("vino")
-    const delics = document.getElementsByName("deli")
-    listener(cajas, vinos, delics)
-}, 500);
+const cajas = document.getElementsByName("caja")
+const vinos = document.getElementsByName("vino")
+const delics = document.getElementsByName("deli")
+listener(cajas, vinos, delics)
 
 const checker = (arr)=>{
     for(let a of arr){
@@ -91,7 +87,7 @@ const checker = (arr)=>{
     }
 }
 
-const listener = (cajas, vinos, delics)=>{
+function listener(cajas, vinos, delics){
      
     const limit = 2
     const limitD = 34
@@ -436,6 +432,8 @@ btnEnd.addEventListener("click", ()=>{
             <h3>${cajaFinal.bebida.vinoUno}</h3>
             </div>
         </div>
+
+        <button>hola</button>
         `
     }
     

@@ -1,62 +1,58 @@
 let container = document.querySelector("#cardCont")
+import {
+    boxStock
+} from "./stocks/box.js"
+
+const SwalBtns = (buttons) => {
+    for (let btn of buttons) {
+        btn.onclick = () => {
+            boxStock.forEach((box) => {
+                if (btn.dataset.name == box.codigo) {
+                    Swal.fire({
+                        html: box.text,
+                        showCloseButton: true,
+                        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Ver en MercadoShops',
+                    }).then((res) => {
+                        if (res.isConfirmed) {
+                            window.open(box.link)
+                        }
+                    })
+                }
+            })
+
+        }
+    }
+}
 
 function renderAll() {
-    container.innerHTML = ""
-    
-    fetch("./json/box.json")
-        .then((res) => res.json())
-        .then((boxs) => {
-            for (let i = 0; i < boxs.length; i += 1) {
-                let cardRow = document.createElement('div')
 
-                cardRow.innerHTML += `
+    container.innerHTML = ""
+
+    boxStock.forEach((producto) => {
+        let cardRow = document.createElement('div')
+
+        cardRow.innerHTML +=
+            `
             <div class="cCard">
-            <img src="${boxs[i].img}" alt="...">
-            <a class="buttn btnProds" data-name=${boxs[i].codigo}>Ver más</a>
+            <img src="${producto.img}" alt="...">
+            <a class="buttn btnProds" data-name=${producto.codigo}>Ver más</a>
             </div>
             `
-                cardRow.className = "col-6 col-md-4 p-0"
-                container.append(cardRow)
+        cardRow.className = "col-6 col-md-4 p-0"
+        container.appendChild(cardRow)
+    })
 
-            }
-        })
-        .finally(() => {
-            const buttons = document.getElementsByClassName("btnProds")
-            SwalBtns(buttons)
-        })
+    const buttons = document.getElementsByClassName("btnProds")
+    SwalBtns(buttons)
 }
 
 if (window.location.pathname == '/productos.html') {
     renderAll()
 }
 
-if(window.innerWidth >= 768){
+if (window.innerWidth >= 768) {
     let acc = document.querySelector(".accordion-collapse")
     acc.classList += "show"
-}
-
-const SwalBtns = (buttons) => {
-    for (let btn of buttons) {
-        btn.onclick = () => {
-            fetch("./json/box.json")
-                .then((res) => res.json())
-                .then((boxs) => {
-                    for (let box of boxs) {
-                        if (btn.dataset.name == box.codigo) {
-                            Swal.fire({
-                                html: box.text,
-                                showCloseButton: true,
-                                confirmButtonText: '<i class="fa fa-thumbs-up"></i> Ver en MercadoShops',
-                            }).then((res) => {
-                                if (res.isConfirmed) {
-                                    window.open(box.link)
-                                }
-                            })
-                        }
-                    }
-                })
-        }
-    }
 }
 
 // FILTROS
@@ -67,7 +63,16 @@ let deli = document.getElementById("deli")
 let btnReset = document.getElementById("bReset")
 
 btnReset.onclick = () => {
-    window.location.reload()
+    deli.checked = false
+    tipo.forEach(t => {
+        t.checked = false
+        t.disabled = false
+        })
+    tam.forEach(tm => {
+        tm.checked = false
+        tm.disabled = false
+        })
+    renderAll()
 }
 
 deli.addEventListener('change', () => {
@@ -81,46 +86,39 @@ deli.addEventListener('change', () => {
             tm.disabled = true
         }
         container.innerHTML = ""
-        fetch("./json/box.json")
-            .then((res) => res.json())
-            .then((boxs) => {
-                for (let box of boxs) {
-                    if (box.deli == true) {
-                        let cardRow = document.createElement('div')
+        boxStock.forEach((box) => {
+            if (box.deli == true) {
+                let cardRow = document.createElement('div')
 
-                        cardRow.innerHTML += `
-                    <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
-                    <img src="${box.img}" alt="...">
-                    <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
-                    </div>
+                cardRow.innerHTML +=
                     `
-                        cardRow.className = "col-6 col-md-4 p-0"
-                        container.append(cardRow)
-                    }
-                }
-
-            })
-            .finally(() => {
-                const buttons = document.getElementsByClassName("btnProds")
-                SwalBtns(buttons)
-            })
-
-    } else {
-        window.location.reload()
+                <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
+                <img src="${box.img}" alt="...">
+                <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
+                </div>
+                `
+                cardRow.className = "col-6 col-md-4 p-0"
+                container.append(cardRow)
+            }
+        })
+        const buttons = document.getElementsByClassName("btnProds")
+        SwalBtns(buttons)
+    }else{
+        renderAll()
     }
 })
 
 for (let t of tipo) {
     t.addEventListener('change', () => {
-        if(t.id == "bolsa"){
-            for(let tm of tam){
+        if (t.id == "bolsa") {
+            for (let tm of tam) {
                 tm.checked = false
-                tm.disabled= true
+                tm.disabled = true
             }
-        }else{
-            for(let tm of tam){
+        } else {
+            for (let tm of tam) {
                 tm.checked = false
-                tm.disabled= false
+                tm.disabled = false
             }
         }
         if (t.checked)
@@ -147,42 +145,38 @@ function tipYtam(t, del) {
 }
 
 function renderTipo(tId, tmId, del) {
-    fetch("./json/box.json")
-        .then((res) => res.json())
-        .then((boxs) => {
-            container.innerHTML = ""
-            for (let box of boxs) {
-                if (tmId == "asd") {
-                    if (box.tipo == tId) {
-                        let cardRow = document.createElement('div')
+    container.innerHTML = ""
+    boxStock.forEach((box) =>{
+        if (tmId == "asd") {
+            if (box.tipo == tId) {
+                let cardRow = document.createElement('div')
 
-                        cardRow.innerHTML += `
-                    <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
-                    <img src="${box.img}" alt="...">
-                    <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
-                    </div>
-                    `
-                        cardRow.className = "col-6 col-md-4 p-0"
-                        container.append(cardRow)
-                    }
-                } else if (tmId != "asd") {
-                    if (box.tipo == tId && box.tam == tmId) {
-                        let cardRow = document.createElement('div')
-
-                        cardRow.innerHTML += `
-                        <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
-                        <img src="${box.img}" alt="...">
-                        <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
-                        </div>
-                        `
-                        cardRow.className = "col-6 col-md-4 p-0"
-                        container.append(cardRow)
-                    }
-                }
+                cardRow.innerHTML += 
+                `
+                <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
+                <img src="${box.img}" alt="...">
+                <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
+                </div>
+                `
+                cardRow.className = "col-6 col-md-4 p-0"
+                container.append(cardRow)
             }
-        })
-        .finally(() => {
-            const buttons = document.getElementsByClassName("btnProds")
-            SwalBtns(buttons)
-        })
+        } else if (tmId != "asd") {
+            if (box.tipo == tId && box.tam == tmId) {
+                let cardRow = document.createElement('div')
+
+                cardRow.innerHTML += 
+                `
+                <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
+                <img src="${box.img}" alt="...">
+                <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
+                </div>
+                `
+                cardRow.className = "col-6 col-md-4 p-0"
+                container.append(cardRow)
+            }
+        }
+    })
+    const buttons = document.getElementsByClassName("btnProds")
+    SwalBtns(buttons)
 }
