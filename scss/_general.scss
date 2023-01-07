@@ -5,6 +5,10 @@ nav{
     img{
         width: 3em;
     }
+    img[src="./img/icons/cart.png"]{
+        width: 35px;
+        cursor: pointer;
+    }
 }
 
 footer{

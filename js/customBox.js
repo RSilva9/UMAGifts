@@ -6,12 +6,19 @@ let accCajas = document.querySelector("#accCajas")
 let accVinos = document.querySelector("#accVinos")
 let accDelis = document.querySelector("#accDelis")
 
-let btnEnd = document.getElementById("btnEnd")
+import { carrito } from "./carrito.js"
+
+export let btnEnd = document.getElementById("btnEnd")
 var checkeadas = []
+
+const limit = 2
+const limitD = 34
+var suma = 0
+var vinoCant = 0
 
 import { prodStock } from "./stocks/productos.js"
 
-const cajaFinal = {
+export const cajaFinal = {
     estuche: "",
     bebida: {
         vinoUno: "",
@@ -22,7 +29,8 @@ const cajaFinal = {
         deliDos: "",
         deliTres: "",
         deliCuatro: ""
-    }
+    },
+    tipo: "customBox"
 }
 
 const deliArr = Object.values(cajaFinal.deli)
@@ -88,10 +96,6 @@ const checker = (arr)=>{
 }
 
 function listener(cajas, vinos, delics){
-     
-    const limit = 2
-    const limitD = 34
-    var suma = 0
     
     for(let c of cajas){       
 
@@ -115,8 +119,7 @@ function listener(cajas, vinos, delics){
                         }
                     }
                     acItemTres.parentElement.classList.add("d-none")
-                    acItemTres.classList.remove("show")
-
+                    acItemTres.classList.remove("show")    
                 }else
                 if(c.parentElement.dataset.tam == "doble"){
                     for(let v of vinos){
@@ -159,7 +162,6 @@ function listener(cajas, vinos, delics){
                         }else{
                             cajaFinal.bebida.vinoDos = v.parentElement.childNodes[5].textContent
                         }
-                        
                     }else
                     if(v.type == "radio"){
                         cajaFinal.bebida.vinoUno = v.parentElement.childNodes[5].textContent
@@ -167,6 +169,8 @@ function listener(cajas, vinos, delics){
                         acItemTres.classList.remove("show")
                         btnEnd.parentElement.classList.remove("d-none")
                         btnEnd.parentElement.classList.add("d-flex")
+
+                        vinoCant = 0
                     }
                 }else{
                     v.checked = false
@@ -292,6 +296,7 @@ function listener(cajas, vinos, delics){
 
 btnEnd.addEventListener("click", ()=>{
     let cfContainer = document.createElement("div")
+    var cant = 0
     cfContainer.classList.add("d-flex")
     cfContainer.classList.add("flex-column")
     cfContainer.classList.add("cfSwal")
@@ -432,15 +437,40 @@ btnEnd.addEventListener("click", ()=>{
             <h3>${cajaFinal.bebida.vinoUno}</h3>
             </div>
         </div>
-
-        <button>hola</button>
         `
     }
-    
 
     Swal.fire({
         html: cfContainer,
         showCloseButton: true,
-        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Listo',
+        confirmButtonText: '<i class="fa fa-thumbs-up"></i>Listo',
+    }).then((result)=>{
+        if (result.isConfirmed) {
+            renderFinal(cfContainer)
+        }
     })
 })
+
+const renderFinal = (cfContainer)=>{
+    const contentBlock = document.getElementById("contentBlock")
+    cfContainer.removeChild(cfContainer.childNodes[1])
+    const final = document.createElement("div")
+    final.classList = "d-flex flex-row align-items-center"
+    final.innerHTML=
+    `
+    <div>
+    ${cfContainer.innerHTML}
+    <div>
+    <button class="buttn" id="btnCarroAdd">Agregar al carrito
+    `
+    setTimeout(() => {
+        const btnCarroAdd = document.getElementById("btnCarroAdd")
+    }, 100);
+    contentBlock.appendChild(final)
+
+    btnCarroAdd.onclick = ()=>{
+        carrito.push(cajaFinal)
+        localStorage.setItem("carrito", JSON.stringify(carrito))
+    }
+}
+
