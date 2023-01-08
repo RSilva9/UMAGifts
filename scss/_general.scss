@@ -89,7 +89,6 @@ h3{
     grid-template-columns: repeat(4,1fr);
     grid-template-rows: auto;
     grid-gap: 1rem;
-
     text-align: center;
 }
 
@@ -124,6 +123,24 @@ h3{
 
     h2{
         text-align: center;
+    }
+}
+
+.accordion-button:not(.collapsed) {
+    color: black;
+    background-color: map-get($map: $paleta, $key: secondary);
+}
+
+#btnBox{
+    position: fixed;
+    top: 80px;
+    right: 10px;
+    z-index: 999;
+    width: 70px;
+    height: 70px;
+    
+    img{
+        width: 75%;
     }
 }
 

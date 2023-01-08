@@ -6,9 +6,11 @@ let accCajas = document.querySelector("#accCajas")
 let accVinos = document.querySelector("#accVinos")
 let accDelis = document.querySelector("#accDelis")
 
-import { carrito } from "./carrito.js"
+let offCanvasCaja = document.getElementById("offCanvasCaja")
+let offCanvasVinos = document.getElementById("offCanvasVinos")
+let offCanvasDelis = document.getElementById("offCanvasDelis")
 
-export let btnEnd = document.getElementById("btnEnd")
+
 var checkeadas = []
 
 const limit = 2
@@ -135,14 +137,18 @@ function listener(cajas, vinos, delics){
                 cajaFinal.bebida.vinoDos = ""
                 acItemDos.parentElement.classList.remove("d-none")
                 acItemDos.classList.add("show")
+
+                offCanvasCaja.innerHTML =
+                `
+                <h3 class="me-1 fw-bold">Estuche:</h3>
+                <h3> ${cajaFinal.estuche}<h3>
+                `
             }
             checker(cajas)
             for(let v of vinos){
                 v.checked = false
                 v.parentElement.classList.remove("cardColorCheck")
             }
-            btnEnd.parentElement.classList.add("d-none")
-            btnEnd.parentElement.classList.remove("d-flex")
         })
     }
 
@@ -162,15 +168,31 @@ function listener(cajas, vinos, delics){
                         }else{
                             cajaFinal.bebida.vinoDos = v.parentElement.childNodes[5].textContent
                         }
+
+                        if(checkeadas.length ==1){
+                            offCanvasVinos.innerHTML =
+                            `
+                            <h3 class="me-1 fw-bold">Botella:</h3>
+                            <div>
+                            <h3>${cajaFinal.bebida.vinoUno}</h3>
+                            </div>
+                            `
+                        }
                     }else
                     if(v.type == "radio"){
                         cajaFinal.bebida.vinoUno = v.parentElement.childNodes[5].textContent
                         acItemTres.parentElement.classList.add("d-none")
                         acItemTres.classList.remove("show")
-                        btnEnd.parentElement.classList.remove("d-none")
-                        btnEnd.parentElement.classList.add("d-flex")
 
                         vinoCant = 0
+
+                        offCanvasVinos.innerHTML =
+                        `
+                        <h3 class="me-1 fw-bold">Botella:</h3>
+                        <div>
+                        <h3>${cajaFinal.bebida.vinoUno}</h3>
+                        </div>
+                        `
                     }
                 }else{
                     v.checked = false
@@ -178,18 +200,34 @@ function listener(cajas, vinos, delics){
                 if(checkeadas.length == limit){
                     acItemTres.parentElement.classList.add("d-none")
                     acItemTres.classList.remove("show")
-                    btnEnd.parentElement.classList.remove("d-none")
-                    btnEnd.parentElement.classList.add("d-flex")
+
+                    offCanvasVinos.innerHTML =
+                    `
+                    <h3 class="me-1 fw-bold">Botellas:</h3>
+                    <div>
+                    <h3>${cajaFinal.bebida.vinoUno}</h3>
+                    <h3>${cajaFinal.bebida.vinoDos}</h3>
+                    </div>
+                    `
                 }
             }else{
                 checkeadas.pop(v)
                 if(checkeadas.length == 1){
                     acItemTres.parentElement.classList.remove("d-none")
                     acItemTres.classList.add("show")
+
+                    offCanvasVinos.innerHTML =
+                    `
+                    <h3 class="me-1 fw-bold">Botella:</h3>
+                    <div>
+                    <h3>${cajaFinal.bebida.vinoUno}</h3>
+                    </div>
+                    `
                 }
                 if(checkeadas.length == 0){
                     acItemTres.parentElement.classList.add("d-none")
                     acItemTres.classList.remove("show")
+                    offCanvasVinos.innerHTML = ""
                 }
 
                 if(cajaFinal.bebida.vinoDos == v.parentElement.childNodes[5].textContent){
@@ -199,14 +237,13 @@ function listener(cajas, vinos, delics){
                     cajaFinal.bebida.vinoUno = cajaFinal.bebida.vinoDos
                     cajaFinal.bebida.vinoDos = ""
                 }
-                btnEnd.parentElement.classList.add("d-none")
-                btnEnd.parentElement.classList.remove("d-flex")
             }
             checker(vinos)
             cajaFinal.deli.deliUno = ""
             cajaFinal.deli.deliDos = ""
             cajaFinal.deli.deliTres = ""
             cajaFinal.deli.deliCuatro = ""
+            offCanvasDelis.innerHTML = ""
             for(let i=0; i<deliArr.length; i+=1){
                 deliArr[i] = ""
             }
@@ -221,7 +258,7 @@ function listener(cajas, vinos, delics){
     for(let d of delics){
 
         d.addEventListener("change", ()=>{
-            if(d.checked){         
+            if(d.checked){
                 if((suma + Number(d.parentElement.dataset.size)) > limitD){
                     d.checked = false
                     Swal.fire({
@@ -236,30 +273,87 @@ function listener(cajas, vinos, delics){
                     if(deliArr[0] == ""){
                         deliArr[0] = d.parentElement.childNodes[5].textContent
                         cajaFinal.deli.deliUno = d.parentElement.childNodes[5].textContent
+
+                        offCanvasDelis.innerHTML =
+                        `
+                        <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                        <div>
+                        <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                        </div>
+                        `
                     }else
                     if(deliArr[1] == ""){
                         deliArr[1] = d.parentElement.childNodes[5].textContent
                         cajaFinal.deli.deliDos = d.parentElement.childNodes[5].textContent
+
+                        offCanvasDelis.innerHTML =
+                        `
+                        <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                        <div>
+                        <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                        <h3>○ ${cajaFinal.deli.deliDos}</h3>
+                        </div>
+                        `
                     }else
                     if(deliArr[2] == ""){
                         deliArr[2] = d.parentElement.childNodes[5].textContent
                         cajaFinal.deli.deliTres = d.parentElement.childNodes[5].textContent
+
+                        offCanvasDelis.innerHTML =
+                        `
+                        <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                        <div>
+                        <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                        <h3>○ ${cajaFinal.deli.deliDos}</h3>
+                        <h3>○ ${cajaFinal.deli.deliTres}</h3>
+                        </div>
+                        `
                     }else
                     if(deliArr[3] == ""){
                         deliArr[3] = d.parentElement.childNodes[5].textContent
                         cajaFinal.deli.deliCuatro = d.parentElement.childNodes[5].textContent
+
+                        offCanvasDelis.innerHTML =
+                        `
+                        <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                        <div>
+                        <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                        <h3>○ ${cajaFinal.deli.deliDos}</h3>
+                        <h3>○ ${cajaFinal.deli.deliTres}</h3>
+                        <h3>○ ${cajaFinal.deli.deliCuatro}</h3>
+                        </div>
+                        `
                     }
                 }
             }else{
                 if(deliArr[3] == d.parentElement.childNodes[5].textContent){
                     deliArr[3] = ""
                     cajaFinal.deli.deliCuatro = ""
+
+                    offCanvasDelis.innerHTML =
+                    `
+                    <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                    <div>
+                    <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                    <h3>○ ${cajaFinal.deli.deliDos}</h3>
+                    <h3>○ ${cajaFinal.deli.deliTres}</h3>
+                    </div>
+                    `
                 }else
                 if(deliArr[2] == d.parentElement.childNodes[5].textContent){
                     deliArr[2] = deliArr[3]
                     deliArr[3] = ""
                     cajaFinal.deli.deliTres = cajaFinal.deli.deliCuatro
                     cajaFinal.deli.deliCuatro = ""
+
+                    offCanvasDelis.innerHTML =
+                    `
+                    <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                    <div>
+                    <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                    <h3>○ ${cajaFinal.deli.deliDos}</h3>
+                    </div>
+                    `
                 }else
                 if(deliArr[1] == d.parentElement.childNodes[5].textContent){
                     deliArr[1] = deliArr[2]
@@ -268,6 +362,14 @@ function listener(cajas, vinos, delics){
                     cajaFinal.deli.deliDos = cajaFinal.deli.deliTres
                     cajaFinal.deli.deliTres = cajaFinal.deli.deliCuatro
                     cajaFinal.deli.deliCuatro = ""
+
+                    offCanvasDelis.innerHTML =
+                    `
+                    <h3 class="me-1 fw-bold">Delicatessen:</h3>
+                    <div>
+                    <h3>○ ${cajaFinal.deli.deliUno}</h3>
+                    </div>
+                    `
                 }else
                 if(deliArr[0] == d.parentElement.childNodes[5].textContent){
                     deliArr[0] = deliArr[1]
@@ -278,199 +380,13 @@ function listener(cajas, vinos, delics){
                     cajaFinal.deli.deliDos = cajaFinal.deli.deliTres
                     cajaFinal.deli.deliTres = cajaFinal.deli.deliCuatro
                     cajaFinal.deli.deliCuatro = ""
+
+                    offCanvasDelis.innerHTML = ""
                 }
             
                 d.parentElement.classList.remove("cardColorCheck")
                 suma -= Number(d.parentElement.dataset.size)
             }
-            if(suma == 0){
-                btnEnd.parentElement.classList.add("d-none")
-                btnEnd.parentElement.classList.remove("d-flex")
-            }else{
-                btnEnd.parentElement.classList.remove("d-none")
-                btnEnd.parentElement.classList.add("d-flex")
-            }
         })
     }
 }
-
-btnEnd.addEventListener("click", ()=>{
-    let cfContainer = document.createElement("div")
-    var cant = 0
-    cfContainer.classList.add("d-flex")
-    cfContainer.classList.add("flex-column")
-    cfContainer.classList.add("cfSwal")
-
-    if(checkeadas.length == 1){
-
-        if(cajaFinal.deli.deliCuatro != ""){
-            cfContainer.innerHTML = 
-            `
-            <h2>CAJA FINAL</h2>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Estuche:</h3>
-            <h3> ${cajaFinal.estuche}<h3>
-            </div>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Botella:</h3>
-            <h3>${cajaFinal.bebida.vinoUno}</h3>
-            </div>
-    
-            <div class="d-flex flex-column flex-md-row">
-            <h3 class="me-1 fw-bold">Delicatessen:</h3>
-                <div>
-                <h3>○ ${cajaFinal.deli.deliUno}</h3>
-                <h3>○ ${cajaFinal.deli.deliDos}</h3>
-                <h3>○ ${cajaFinal.deli.deliTres}</h3>
-                <h3>○ ${cajaFinal.deli.deliCuatro}</h3>
-                </div>
-            </div>
-            `
-        }else
-        if(cajaFinal.deli.deliTres != ""){
-            cfContainer.innerHTML = 
-            `
-            <h2>CAJA FINAL</h2>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Estuche:</h3>
-            <h3> ${cajaFinal.estuche}<h3>
-            </div>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Botella:</h3>
-            <h3>${cajaFinal.bebida.vinoUno}</h3>
-            </div>
-    
-            <div class="d-flex flex-column flex-md-row">
-            <h3 class="me-1 fw-bold">Delicatessen:</h3>
-                <div>
-                <h3>○ ${cajaFinal.deli.deliUno}</h3>
-                <h3>○ ${cajaFinal.deli.deliDos}</h3>
-                <h3>○ ${cajaFinal.deli.deliTres}</h3>
-                </div>
-            </div>
-            `
-        }else
-        if(cajaFinal.deli.deliDos != ""){
-            cfContainer.innerHTML = 
-            `
-            <h2>CAJA FINAL</h2>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Estuche:</h3>
-            <h3> ${cajaFinal.estuche}<h3>
-            </div>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Botella:</h3>
-            <h3>${cajaFinal.bebida.vinoUno}</h3>
-            </div>
-    
-            <div class="d-flex flex-column flex-md-row">
-            <h3 class="me-1 fw-bold">Delicatessen:</h3>
-                <div>
-                <h3>○ ${cajaFinal.deli.deliUno}</h3>
-                <h3>○ ${cajaFinal.deli.deliDos}</h3>
-                </div>
-            </div>
-            `
-        }else
-        if(cajaFinal.deli.deliUno != ""){
-            cfContainer.innerHTML = 
-            `
-            <h2>CAJA FINAL</h2>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Estuche:</h3>
-            <h3> ${cajaFinal.estuche}<h3>
-            </div>
-        
-            <div class="d-flex flex-row">
-            <h3 class="me-1 fw-bold">Botella:</h3>
-            <h3>${cajaFinal.bebida.vinoUno}</h3>
-            </div>
-    
-            <div class="d-flex flex-column flex-md-row">
-            <h3 class="me-1 fw-bold">Delicatessen:</h3>
-                <div>
-                <h3>○ ${cajaFinal.deli.deliUno}</h3>
-                </div>
-            </div>
-            `
-        }
-    
-    }else
-    if(checkeadas.length == 2){
-        cfContainer.innerHTML = 
-        `
-        <h2>CAJA FINAL</h2>
-    
-        <div class="d-flex flex-row align-items-center">
-        <h3 class="me-1 fw-bold">Estuche:</h3>
-        <h3>${cajaFinal.estuche}<h3>
-        </div>
-    
-        <div class="d-flex flex-row">
-        <h3 class="me-1 fw-bold">Botellas:</h3>
-            <div>
-            <h3>${cajaFinal.bebida.vinoUno}</h3>
-            <h3>${cajaFinal.bebida.vinoDos}</h3>
-            </div>
-        </div>
-        `
-    }else{
-        cfContainer.innerHTML = 
-        `
-        <h2>CAJA FINAL</h2>
-    
-        <div class="d-flex flex-row align-items-center">
-        <h3 class="me-1 fw-bold">Estuche:</h3>
-        <h3>${cajaFinal.estuche}<h3>
-        </div>
-    
-        <div class="d-flex flex-row">
-        <h3 class="me-1 fw-bold">Botella:</h3>
-            <div>
-            <h3>${cajaFinal.bebida.vinoUno}</h3>
-            </div>
-        </div>
-        `
-    }
-
-    Swal.fire({
-        html: cfContainer,
-        showCloseButton: true,
-        confirmButtonText: '<i class="fa fa-thumbs-up"></i>Listo',
-    }).then((result)=>{
-        if (result.isConfirmed) {
-            renderFinal(cfContainer)
-        }
-    })
-})
-
-const renderFinal = (cfContainer)=>{
-    const contentBlock = document.getElementById("contentBlock")
-    cfContainer.removeChild(cfContainer.childNodes[1])
-    const final = document.createElement("div")
-    final.classList = "d-flex flex-row align-items-center"
-    final.innerHTML=
-    `
-    <div>
-    ${cfContainer.innerHTML}
-    <div>
-    <button class="buttn" id="btnCarroAdd">Agregar al carrito
-    `
-    setTimeout(() => {
-        const btnCarroAdd = document.getElementById("btnCarroAdd")
-    }, 100);
-    contentBlock.appendChild(final)
-
-    btnCarroAdd.onclick = ()=>{
-        carrito.push(cajaFinal)
-        localStorage.setItem("carrito", JSON.stringify(carrito))
-    }
-}
-

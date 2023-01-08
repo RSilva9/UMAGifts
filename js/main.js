@@ -50,11 +50,6 @@ if (window.location.pathname == '/productos.html') {
     renderAll()
 }
 
-if (window.innerWidth >= 768) {
-    let acc = document.querySelector(".accordion-collapse")
-    acc.classList += "show"
-}
-
 // FILTROS
 
 const tipo = document.getElementsByName("tipo")

@@ -128,6 +128,23 @@ h3 {
   text-align: center;
 }
 
+.accordion-button:not(.collapsed) {
+  color: black;
+  background-color: #dfbb92;
+}
+
+#btnBox {
+  position: fixed;
+  top: 80px;
+  right: 10px;
+  z-index: 999;
+  width: 70px;
+  height: 70px;
+}
+#btnBox img {
+  width: 75%;
+}
+
 #filtros {
   padding: 10px;
 }
@@ -180,6 +197,10 @@ h3 {
   footer section {
     margin: 10px 0px;
   }
+  #btnBox {
+    width: 50px;
+    height: 50px;
+  }
 }
 @media (min-width: 769px) {
   #contentBlock {
@@ -187,6 +208,9 @@ h3 {
   }
   #filtros {
     padding: 0px;
+  }
+  .accordion-button::after {
+    display: none;
   }
 }
 @media (max-width: 950px) {
