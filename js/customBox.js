@@ -10,6 +10,8 @@ let offCanvasCaja = document.getElementById("offCanvasCaja")
 let offCanvasVinos = document.getElementById("offCanvasVinos")
 let offCanvasDelis = document.getElementById("offCanvasDelis")
 
+let contCajaFinal = document.getElementById("contCajaFinal")
+contCajaFinal.classList = ("d-flex flex-column")
 
 var checkeadas = []
 
@@ -169,7 +171,7 @@ function listener(cajas, vinos, delics){
                             cajaFinal.bebida.vinoDos = v.parentElement.childNodes[5].textContent
                         }
 
-                        if(checkeadas.length ==1){
+                        if(checkeadas.length == 1){
                             offCanvasVinos.innerHTML =
                             `
                             <h3 class="me-1 fw-bold">Botella:</h3>
@@ -193,6 +195,19 @@ function listener(cajas, vinos, delics){
                         <h3>${cajaFinal.bebida.vinoUno}</h3>
                         </div>
                         `
+
+                        contCajaFinal.innerHTML = ""
+                        contCajaFinal.innerHTML =
+                        `
+                        <div class= "d-flex flex-row">
+                        <h3 class="me-1 fw-bold">Estuche:</h3>
+                        <h3> ${cajaFinal.estuche}<h3>
+                        </div>
+                        <div class= "d-flex flex-row">
+                        <h3 class="me-1 fw-bold">Botella:</h3>
+                        <h3> ${cajaFinal.bebida.vinoUno}<h3>
+                        </div>
+                        `
                     }
                 }else{
                     v.checked = false
@@ -209,6 +224,22 @@ function listener(cajas, vinos, delics){
                     <h3>${cajaFinal.bebida.vinoDos}</h3>
                     </div>
                     `
+
+                    contCajaFinal.innerHTML = ""
+                    contCajaFinal.innerHTML =
+                    `
+                    <div class= "d-flex flex-row">
+                    <h3 class="me-1 fw-bold">Estuche:</h3>
+                    <h3> ${cajaFinal.estuche}<h3>
+                    </div>
+                    <div class= "d-flex flex-row">
+                    <h3 class="me-1 fw-bold">Botellas:</h3>
+                    <div class= "d-flex flex-column">
+                    <h3> ${cajaFinal.bebida.vinoUno}<h3>
+                    <h3> ${cajaFinal.bebida.vinoDos}<h3>
+                    </div>
+                    </div>
+                    `
                 }
             }else{
                 checkeadas.pop(v)
@@ -223,11 +254,26 @@ function listener(cajas, vinos, delics){
                     <h3>${cajaFinal.bebida.vinoUno}</h3>
                     </div>
                     `
+
+                    contCajaFinal.innerHTML = ""
+                    contCajaFinal.innerHTML =
+                    `
+                    <div class= "d-flex flex-row">
+                    <h3 class="me-1 fw-bold">Estuche:</h3>
+                    <h3> ${cajaFinal.estuche}<h3>
+                    </div>
+                    <div class= "d-flex flex-row">
+                    <h3 class="me-1 fw-bold">Botella:</h3>
+                    <h3> ${cajaFinal.bebida.vinoUno}<h3>
+                    </div>
+                    `
                 }
                 if(checkeadas.length == 0){
                     acItemTres.parentElement.classList.add("d-none")
                     acItemTres.classList.remove("show")
                     offCanvasVinos.innerHTML = ""
+
+                    contCajaFinal.innerHTML = ""
                 }
 
                 if(cajaFinal.bebida.vinoDos == v.parentElement.childNodes[5].textContent){

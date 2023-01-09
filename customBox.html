@@ -52,7 +52,7 @@
     </div>
   </nav>
 
-  <div id="contentBlock">
+  <main id="contentBlock">
 
     <button class="buttn" id="btnBox" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasBottom"
       aria-controls="offcanvasBottom">
@@ -95,6 +95,7 @@
         </div>
       </div>
       <div class="accordion-item d-none">
+
         <h2 class="accordion-header" id="panelsStayOpen-headingThree">
           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
             data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
@@ -106,29 +107,33 @@
           aria-labelledby="panelsStayOpen-headingThree">
           <div class="accordion-body accGrid" id="accDelis">
 
-
           </div>
         </div>
+
+      </div>
+
+      <div id="contCajaFinal">
+      
+      </div>
+  </main>
+
+  <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
+    <div class="offcanvas-header">
+      <h5 class="offcanvas-title" id="offcanvasBottomLabel">TU BOX</h5>
+      <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+    </div>
+    <div class="offcanvas-body small d-flex flex-column">
+      <div class="d-flex flex-row" id="offCanvasCaja">
+
+      </div>
+      <div class="d-flex flex-row" id="offCanvasVinos">
+
+      </div>
+      <div class="d-flex flex-column flex-md-row" id="offCanvasDelis">
+
       </div>
     </div>
-
-    <div class="offcanvas offcanvas-bottom" tabindex="-1" id="offcanvasBottom" aria-labelledby="offcanvasBottomLabel">
-      <div class="offcanvas-header">
-        <h5 class="offcanvas-title" id="offcanvasBottomLabel">TU BOX</h5>
-        <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-      </div>
-      <div class="offcanvas-body small d-flex flex-column">
-        <div class="d-flex flex-row" id="offCanvasCaja">
-
-        </div>
-        <div class="d-flex flex-row" id="offCanvasVinos">
-
-        </div>
-        <div class="d-flex flex-column flex-md-row" id="offCanvasDelis">
-
-        </div>
-      </div>
-    </div>
+  </div>
 
   </div>
 
