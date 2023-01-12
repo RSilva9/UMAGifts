@@ -1,7 +1,11 @@
 let container = document.querySelector("#cardCont")
-import {
-    boxStock
-} from "./stocks/box.js"
+
+async function getStock(){
+    const response = await fetch("./json/box.json")
+    return response.json();
+}
+
+const boxStock = await getStock()
 
 const SwalBtns = (buttons) => {
     for (let btn of buttons) {

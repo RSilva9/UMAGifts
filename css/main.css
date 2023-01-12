@@ -133,6 +133,11 @@ h3 {
   background-color: #dfbb92;
 }
 
+.accordion-button {
+  color: black;
+  background-color: #dfbb92;
+}
+
 #btnBox {
   position: fixed;
   top: 80px;
@@ -165,6 +170,17 @@ h3 {
 }
 #filtros button {
   margin-bottom: 15px;
+}
+
+#carrito {
+  background-color: white;
+}
+#carrito h3 {
+  font-size: 1em;
+}
+#carrito img {
+  width: 80px;
+  height: 80px;
 }
 
 .popup h2 {

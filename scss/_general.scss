@@ -131,6 +131,11 @@ h3{
     background-color: map-get($map: $paleta, $key: secondary);
 }
 
+.accordion-button{
+    color: black;
+    background-color: map-get($map: $paleta, $key: secondary);
+}
+
 #btnBox{
     position: fixed;
     top: 80px;
@@ -167,6 +172,15 @@ h3{
     }
 }
 
-#contCajaFinal{
-    
+#carrito{
+    background-color: white;
+
+    h3{
+        font-size: 1em;
+    }
+
+    img{
+        width: 80px;
+        height: 80px;
+    }
 }
