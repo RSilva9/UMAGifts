@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap"); /* ELEMENTOS */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap");
 nav {
   background-color: #dfbb92;
 }
@@ -52,23 +52,40 @@ h3 {
   font-size: 1.4em;
 }
 
-/* IDs Y CLASES */
+.popup h2 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 600;
+  font-size: 1.3em;
+  text-align: center;
+}
+.popup h3 {
+  font-family: "Poppins", sans-serif;
+  font-weight: 400;
+  font-size: 1.1em;
+  text-align: start;
+  padding: 0px 50px;
+}
+.popup img {
+  padding: 15px;
+  width: 85%;
+}
+
 .offcanvas {
   background-color: #dfbb92;
 }
 
 .cCard {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
   border-radius: 10px;
   background-color: white;
   font-family: "Source Sans Pro", sans-serif;
   margin: 5px;
   transform: rotate(0);
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  flex-wrap: nowrap;
 }
 .cCard img {
   padding: 10px;
@@ -85,6 +102,19 @@ h3 {
 }
 .cCard input {
   opacity: 0;
+}
+
+.longCard {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  flex-wrap: nowrap;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  border-radius: 10px;
+  background-color: white;
+  padding: 10px;
+  margin: 10px;
 }
 
 .accGrid {
@@ -183,24 +213,6 @@ h3 {
   height: 80px;
 }
 
-.popup h2 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
-  font-size: 1.3em;
-  text-align: center;
-}
-.popup h3 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 400;
-  font-size: 1.1em;
-  text-align: start;
-  padding: 0px 50px;
-}
-.popup img {
-  padding: 15px;
-  width: 85%;
-}
-
 @media (max-width: 525px) {
   footer {
     display: flex;
@@ -244,5 +256,12 @@ h3 {
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: auto;
     grid-gap: 1rem;
+  }
+  .popup h2 {
+    text-align: center;
+  }
+  .popup h3 {
+    text-align: start;
+    padding: 0px;
   }
 }/*# sourceMappingURL=main.css.map */

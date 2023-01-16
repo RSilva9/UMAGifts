@@ -17,7 +17,7 @@
     <script>
         new WOW().init();
     </script>
-
+    
     <nav class="navbar navbar-expand-lg">
         <div class="container-fluid">
             <a class="navbar-brand" href="index.html">
@@ -42,7 +42,7 @@
                     <div class="navbar-nav">
                         <a class="nav-link active" aria-current="page" href="customBox.html">Armá tu box</a>
                     </div>
-                    <div class="navbar-nav">
+                    <div class="navbar-nav active ms-auto">
                         <a href="carrito.html">
                             <img src="./img/icons/cart.png" alt="" id="cart">
                         </a>
@@ -63,8 +63,30 @@
 
                 </div>
             </div>
+
             <hr>
-            
+
+            <div>
+                <h2>Box prearmadas</h2>
+                <div id="armadasDisplay">
+
+                </div>
+            </div>
+
+            <div class="text-center m-2">
+                <button class="buttn" id="terminarCarrito">Enviar pedido</button>
+            </div>
+
+            <div>
+                <form action="https://formsubmit.co/ramasilva909@gmail.com" method="POST">
+                        <input type="text" name="name" required>Nombre<br>
+                        <input type="text" name="email" required>Email<br>
+                        <textarea name="pedido" id="pedido" class="d-none"></textarea>
+                    </p>
+                    <button type="submit" name="submit">Enviar</button>
+                </form>
+            </div>
+
         </section>
 
         <button id="limpiar">Limpiar memoria</button>

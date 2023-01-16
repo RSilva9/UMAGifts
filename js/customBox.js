@@ -26,7 +26,7 @@ async function getStock(){
 
 const prodStock = await getStock()
 
-export const cajaFinal = {
+const cajaFinal = {
     estuche: "",
     bebida: {
         vinoUno: "",
@@ -431,13 +431,19 @@ function listener(cajas, vinos, delics){
         }
     })
     if(cantidad){
-        Swal.fire({
-            icon: 'success',
-            title: `Agregaste ${cantidad} BOX al carrito`,
-        })
         cajaFinal.cantidad = cantidad
         cajasFinales.push(cajaFinal)
         localStorage.setItem("cajas", JSON.stringify(cajasFinales))
+        
+        Swal.fire({
+            icon: 'success',
+            title: `Agregaste ${cantidad} BOX al carrito`,
+        }).then((result)=>{
+            if(result.isConfirmed || result.dismiss){
+                window.location.reload()
+            }
+        })
+        
     }
 }
 

@@ -1,6 +1,7 @@
 let container = document.querySelector("#cardCont")
+const boxArmadas = (JSON.parse(localStorage.getItem('armadas')) || [])
 
-async function getStock(){
+async function getStock() {
     const response = await fetch("./json/box.json")
     return response.json();
 }
@@ -13,17 +14,63 @@ const SwalBtns = (buttons) => {
             boxStock.forEach((box) => {
                 if (btn.dataset.name == box.codigo) {
                     Swal.fire({
-                        html: box.text,
+                        html: `
+                        <div class="popup">
+                        <img src="${box.img}">
+                        ${box.text}
+                        </div>
+                        `,
                         showCloseButton: true,
+                        showDenyButton: true,
+                        confirmButtonColor: '#dfbb92',
+                        denyButtonColor: '#9ebc4a',
                         confirmButtonText: '<i class="fa fa-thumbs-up"></i> Ver en MercadoShops',
-                    }).then((res) => {
+                        denyButtonText: 'Agregar al carrito'
+                    }).then(async (res) => {
                         if (res.isConfirmed) {
                             window.open(box.link)
+                        } else
+                        if (res.isDenied) {
+                            const { value: cantidad } = await Swal.fire({
+                                title: '¿Cuántas BOX querés agregar al carrito?',
+                                input: 'text',
+                                confirmButtonText: 'Agregar al carrito',
+                                inputValidator: (value) => {
+                                    if (!value) {
+                                        return 'Indicá una cantidad'
+                                    }
+                                }
+                            })
+                            if (cantidad) {
+                                let existe = false
+
+                                boxArmadas.forEach(b=>{
+                                    if(b.codigo == btn.dataset.name){
+                                        b.cant += Number(cantidad)
+                                        existe = true
+                                    }
+                                })
+
+                                const addedBox = {
+                                    cant: Number(cantidad),
+                                    codigo: btn.dataset.name
+                                }
+
+                                if(existe == false){
+                                    boxArmadas.push(addedBox)
+                                }
+
+                                localStorage.setItem("armadas", JSON.stringify(boxArmadas))
+
+                                Swal.fire({
+                                    icon: 'success',
+                                    title: `Agregaste ${cantidad} BOX al carrito`,
+                                })
+                            }
                         }
                     })
                 }
             })
-
         }
     }
 }
@@ -66,11 +113,11 @@ btnReset.onclick = () => {
     tipo.forEach(t => {
         t.checked = false
         t.disabled = false
-        })
+    })
     tam.forEach(tm => {
         tm.checked = false
         tm.disabled = false
-        })
+    })
     renderAll()
 }
 
@@ -102,7 +149,7 @@ deli.addEventListener('change', () => {
         })
         const buttons = document.getElementsByClassName("btnProds")
         SwalBtns(buttons)
-    }else{
+    } else {
         renderAll()
     }
 })
@@ -145,13 +192,13 @@ function tipYtam(t, del) {
 
 function renderTipo(tId, tmId, del) {
     container.innerHTML = ""
-    boxStock.forEach((box) =>{
+    boxStock.forEach((box) => {
         if (tmId == "asd") {
             if (box.tipo == tId) {
                 let cardRow = document.createElement('div')
 
-                cardRow.innerHTML += 
-                `
+                cardRow.innerHTML +=
+                    `
                 <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
                 <img src="${box.img}" alt="...">
                 <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
@@ -164,8 +211,8 @@ function renderTipo(tId, tmId, del) {
             if (box.tipo == tId && box.tam == tmId) {
                 let cardRow = document.createElement('div')
 
-                cardRow.innerHTML += 
-                `
+                cardRow.innerHTML +=
+                    `
                 <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
                 <img src="${box.img}" alt="...">
                 <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
