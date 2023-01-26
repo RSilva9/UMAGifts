@@ -33,7 +33,7 @@ const SwalBtns = (buttons) => {
                         if (res.isDenied) {
                             const { value: cantidad } = await Swal.fire({
                                 title: '¿Cuántas BOX querés agregar al carrito?',
-                                input: 'text',
+                                input: 'number',
                                 confirmButtonText: 'Agregar al carrito',
                                 inputValidator: (value) => {
                                     if (!value) {
@@ -151,6 +151,12 @@ deli.addEventListener('change', () => {
         SwalBtns(buttons)
     } else {
         renderAll()
+        for (let t of tipo) {
+            t.disabled = false
+        }
+        for (let tm of tam) {
+            tm.disabled = false
+        }
     }
 })
 

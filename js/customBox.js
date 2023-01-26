@@ -39,7 +39,8 @@ const cajaFinal = {
         deliCuatro: ""
     },
     img: "",
-    cantidad: 0
+    cantidad: 0,
+    codigo: 0
 }
 
 const cajasFinales = (JSON.parse(localStorage.getItem('cajas')) || []);
@@ -422,7 +423,7 @@ function listener(cajas, vinos, delics){
 (btnEnd.childNodes[1]).onclick = async ()=>{
     const {value: cantidad} = await Swal.fire({
         title: '¿Cuántas BOX querés agregar al carrito?',
-        input: 'text',
+        input: 'number',
         confirmButtonText: 'Agregar al carrito',
         inputValidator: (value) => {
             if (!value) {
@@ -432,6 +433,7 @@ function listener(cajas, vinos, delics){
     })
     if(cantidad){
         cajaFinal.cantidad = cantidad
+        cajaFinal.codigo = Math.random()
         cajasFinales.push(cajaFinal)
         localStorage.setItem("cajas", JSON.stringify(cajasFinales))
         
