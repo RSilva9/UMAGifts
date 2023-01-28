@@ -16,7 +16,7 @@
     }
 }
 
-@media (min-width: 769px){
+@media (min-width: 768px){
     #contentBlock{
         margin: 1% 10%;
     }
@@ -62,5 +62,25 @@
         #cell{
             border-bottom: 0.5px solid;
         }
+    }
+}
+
+@media (max-width: 767px){
+    .carousel-control-prev {
+    margin-left: -30px !important;
+    }
+    
+    .carousel-control-next {
+    margin-right: -30px !important;
+    }
+
+    #cell1, #cell2, #cell3, #cell4, #cell5, #cell6{
+        width: 95%;
+    }
+}
+
+@media screen and (min-width: 425px) and (max-width: 767px){
+    #cell1, #cell2, #cell3, #cell4, #cell5, #cell6{
+        width: 85%;
     }
 }

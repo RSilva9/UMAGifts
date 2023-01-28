@@ -101,7 +101,7 @@ if (window.location.pathname == '/productos.html') {
     renderAll()
 }
 
-// FILTROS
+// FILTROS -------------------------------------
 
 const tipo = document.getElementsByName("tipo")
 const tam = document.getElementsByName("tam")

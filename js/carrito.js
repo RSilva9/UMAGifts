@@ -1,6 +1,11 @@
 const customBoxDisplay = document.getElementById("customBoxDisplay")
 const armadasDisplay = document.getElementById("armadasDisplay")
 const enviar = document.getElementById("enviar")
+const nombre = document.getElementById("nombre")
+const email = document.getElementById("email")
+const carrito = document.getElementById("carrito")
+const formPedido = document.getElementById("formPedido")
+const contentBlock = document.getElementById("contentBlock")
 const cajas = JSON.parse(localStorage.getItem("cajas"))
 const armadas = JSON.parse(localStorage.getItem("armadas"))
 let pedido = document.getElementById("pedido")
@@ -17,13 +22,16 @@ function bProd() {
     const borrarProd = document.querySelectorAll("#borrarProd")
 }
 
-renderCarro()
+if(localStorage.getItem("armadas") && localStorage.getItem("cajas")){
+    renderCarro()
+}else{
+    carritoVacio()
+}
 
 function renderCarro() {
     lista = ``
-
+    
     if (localStorage.getItem("cajas")) {
-
         cajas.forEach(caja => {
             let divBox = document.createElement("div")
             if (caja.deli.deliUno != "") {
@@ -159,33 +167,34 @@ function renderCarro() {
     }
 
     assignListener()
-    console.log(lista)
-    pedido.value = lista
+    pedido.value = lista   
 }
 
 function assignListener() {
     if (borrarProd.length > 1) {
         for (let b of borrarProd) {
             b.addEventListener('click', () => {
-                for (let c of cajas) {
-                    if (c.codigo == b.dataset.cod) {
-                        const index = cajas.indexOf(c)
-                        cajas.splice(index, 1)
-                        localStorage.setItem("cajas", JSON.stringify(cajas))
+                if(cajas.length > 0){
+                    for (let c of cajas) {
+                        if (c.codigo == b.dataset.cod) {
+                            const index = cajas.indexOf(c)
+                            cajas.splice(index, 1)
+                            localStorage.setItem("cajas", JSON.stringify(cajas))
+                        }
                     }
                 }
-                for (let a of armadas) {
-                    if (a.codigo === b.dataset.cod) {
-                        const index = armadas.indexOf(a)
-                        armadas.splice(index, 1)
-                        localStorage.setItem("armadas", JSON.stringify(armadas))
+                if(armadas.length > 0){
+                    for (let a of armadas) {
+                        if (a.codigo === b.dataset.cod) {
+                            const index = armadas.indexOf(a)
+                            armadas.splice(index, 1)
+                            localStorage.setItem("armadas", JSON.stringify(armadas))
+                        }
                     }
-                }
+                }    
                 clearCarro()
-                console.log(customBoxDisplay.children)
                 renderCarro()
             })
-
         }
     } else {
         borrarProd.addEventListener('click', () => {
@@ -193,18 +202,30 @@ function assignListener() {
                 if (c.codigo == borrarProd.dataset.cod) {
                     const index = cajas.indexOf(c)
                     cajas.splice(index, 1)
-                    localStorage.setItem("cajas", JSON.stringify(cajas))
+                    if(cajas.length > 0){
+                        localStorage.setItem("cajas", JSON.stringify(cajas))
+                    }else{
+                        localStorage.removeItem("cajas")
+                    }
                 }
             }
             for (let a of armadas) {
                 if (a.codigo === borrarProd.dataset.cod) {
                     const index = armadas.indexOf(a)
                     armadas.splice(index, 1)
-                    localStorage.setItem("armadas", JSON.stringify(armadas))
+                    if(armadas.length > 0){
+                        localStorage.setItem("armadas", JSON.stringify(armadas))
+                    }else{
+                        localStorage.removeItem("armadas")
+                    }
                 }
             }
             clearCarro()
-            renderCarro()
+            if(armadas.length == 0 && cajas.length == 0){
+                carritoVacio()
+            }else{
+                renderCarro()
+            }
         })
     }
 }
@@ -219,5 +240,22 @@ function clearCarro() {
 }
 
 enviar.onclick = ()=>{
-    localStorage.clear()
+    if(nombre.value!="" && email.value!=""){
+        localStorage.clear()
+    }
+}
+
+function carritoVacio(){
+    lista =``
+    carrito.classList.add("d-none")
+    formPedido.classList.add("d-none")
+    let div = document.createElement("div")
+    div.classList.add("carritoVacio")
+    div.innerHTML=`
+    <svg xmlns="http://www.w3.org/2000/svg" width="150" height="150" fill="currentColor" class="bi bi-bag" viewBox="0 0 16 16">
+        <path d="M8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1zm3.5 3v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5zM2 5h12v9a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V5z"/>
+    </svg>
+    <h2>Tu carrito está vacío</h2>
+    `
+    contentBlock.appendChild(div)
 }

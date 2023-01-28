@@ -5,8 +5,12 @@ nav{
         width: 3em;
     }
     img[src="./img/icons/cart.png"]{
-        width: 35px;
+        width: 2em;
         cursor: pointer;
+    }
+    a{
+        display: flex;
+        align-items: center;
     }
 }
 
