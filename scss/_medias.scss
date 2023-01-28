@@ -55,6 +55,12 @@
             text-align: start;
             padding: 0px;
         }
+    }
 
+    .longCard{
+        @include flex(column, flex-start, center, nowrap);
+        #cell{
+            border-bottom: 0.5px solid;
+        }
     }
 }

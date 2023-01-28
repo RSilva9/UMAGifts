@@ -204,6 +204,8 @@ h3 {
 
 #carrito {
   background-color: white;
+  margin: 5px 0px;
+  padding: 16px;
 }
 #carrito h3 {
   font-size: 1em;
@@ -263,5 +265,15 @@ h3 {
   .popup h3 {
     text-align: start;
     padding: 0px;
+  }
+  .longCard {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+  }
+  .longCard #cell {
+    border-bottom: 0.5px solid;
   }
 }/*# sourceMappingURL=main.css.map */

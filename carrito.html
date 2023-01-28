@@ -73,23 +73,17 @@
                 </div>
             </div>
 
-            <div class="text-center m-2">
-                <button class="buttn" id="terminarCarrito">Enviar pedido</button>
-            </div>
-
-            <div>
-                <form action="https://formsubmit.co/umaregalos@gmail.com" method="POST">
-                        <input type="text" name="name" required>Nombre<br>
-                        <input type="text" name="email" required>Email<br>
-                        <textarea name="pedido" id="pedido" class="d-none"></textarea>
-                    </p>
-                    <button type="submit" name="submit">Enviar</button>
-                </form>
-            </div>
-
         </section>
 
-        <button id="limpiar">Limpiar memoria</button>
+        <div class="bg-white p-3">
+            <form class="d-flex flex-column align-items-start" action="https://formsubmit.co/umaregalos@gmail.com" method="POST">
+                    <input type="text" name="name" placeholder="Nombre" required>
+                    <input type="text" name="email" placeholder="Correo" required>
+                    <textarea name="pedido" id="pedido" class="d-none"></textarea>
+                </p>
+                <button class="buttn" type="submit" name="submit" id="enviar">Enviar pedido</button>
+            </form>
+        </div>
 
     </main>
 
