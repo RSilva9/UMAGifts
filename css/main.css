@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap");
 nav {
-  background-color: #dfbb92;
+  background-color: #a84d7c;
 }
 nav img {
   width: 3em;
@@ -12,6 +12,7 @@ nav img[src="./img/icons/cart.png"] {
 nav a {
   display: flex;
   align-items: center;
+  color: white !important;
 }
 
 footer {
@@ -21,22 +22,28 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 15px 0px;
-  background-color: #dfbb92;
+  background-image: url("/img/footer.jpg");
 }
 footer a {
+  color: white;
   font-size: 1.2em;
 }
 footer p {
+  color: white;
   font-family: "Source Sans Pro", sans-serif;
   font-size: 1.2em;
 }
 footer img {
+  color: white;
   width: 1.3em;
   margin-right: 5px;
 }
+footer h3 {
+  color: white;
+}
 
 body {
-  background-color: #ffe7cb;
+  background-color: #fff5e6;
 }
 
 a {
@@ -75,7 +82,7 @@ h3 {
 }
 
 .offcanvas {
-  background-color: #dfbb92;
+  background-color: #a84d7c;
 }
 
 .cCard {
@@ -164,12 +171,12 @@ h3 {
 
 .accordion-button:not(.collapsed) {
   color: black;
-  background-color: #dfbb92;
+  background-color: #a84d7c;
 }
 
 .accordion-button {
   color: black;
-  background-color: #dfbb92;
+  background-color: #a84d7c;
 }
 
 .carritoVacio {
@@ -179,19 +186,6 @@ h3 {
   align-items: center;
   flex-wrap: nowrap;
   margin: 150px 0px 400px 0px;
-}
-
-.myCarousel {
-  margin-left: 30px;
-  margin-right: 30px;
-}
-
-.carousel-control-prev {
-  margin-left: -100px !important;
-}
-
-.carousel-control-next {
-  margin-right: -100px !important;
 }
 
 .carousel-control-prev-icon {
@@ -266,6 +260,17 @@ h3 {
   margin: 5px 5px;
 }
 
+#franjaTop {
+  display: flex;
+  justify-content: center;
+  padding: 15px 0px;
+  background-image: url("/img/madera.jpg");
+  background-size: cover;
+}
+#franjaTop img {
+  width: 130px;
+}
+
 @media (max-width: 525px) {
   footer {
     display: flex;
@@ -285,9 +290,6 @@ h3 {
   }
 }
 @media (min-width: 768px) {
-  #contentBlock {
-    margin: 1% 10%;
-  }
   #filtros {
     padding: 0px;
   }
