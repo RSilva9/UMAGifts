@@ -22,7 +22,7 @@ function bProd() {
     const borrarProd = document.querySelectorAll("#borrarProd")
 }
 
-if(localStorage.getItem("armadas") && localStorage.getItem("cajas")){
+if(localStorage.getItem("armadas") || localStorage.getItem("cajas")){
     renderCarro()
 }else{
     carritoVacio()
@@ -179,7 +179,11 @@ function assignListener() {
                         if (c.codigo == b.dataset.cod) {
                             const index = cajas.indexOf(c)
                             cajas.splice(index, 1)
-                            localStorage.setItem("cajas", JSON.stringify(cajas))
+                            if(cajas.length > 0){
+                                localStorage.setItem("cajas", JSON.stringify(cajas))
+                            }else{
+                                localStorage.removeItem("cajas")
+                            }
                         }
                     }
                 }
@@ -188,43 +192,55 @@ function assignListener() {
                         if (a.codigo === b.dataset.cod) {
                             const index = armadas.indexOf(a)
                             armadas.splice(index, 1)
-                            localStorage.setItem("armadas", JSON.stringify(armadas))
+                            if(armadas.length > 0){
+                                localStorage.setItem("armadas", JSON.stringify(armadas))
+                            }else{
+                                localStorage.removeItem("armadas")
+                            }
                         }
                     }
                 }    
                 clearCarro()
-                renderCarro()
+                if(localStorage.getItem("armadas") || localStorage.getItem("cajas")){
+                    renderCarro()
+                }else{
+                    carritoVacio()
+                }
             })
         }
     } else {
         borrarProd.addEventListener('click', () => {
-            for (let c of cajas) {
-                if (c.codigo == borrarProd.dataset.cod) {
-                    const index = cajas.indexOf(c)
-                    cajas.splice(index, 1)
-                    if(cajas.length > 0){
-                        localStorage.setItem("cajas", JSON.stringify(cajas))
-                    }else{
-                        localStorage.removeItem("cajas")
+            if(cajas){
+                for (let c of cajas) {
+                    if (c.codigo == borrarProd.dataset.cod) {
+                        const index = cajas.indexOf(c)
+                        cajas.splice(index, 1)
+                        if(cajas.length > 0){
+                            localStorage.setItem("cajas", JSON.stringify(cajas))
+                        }else{
+                            localStorage.removeItem("cajas")
+                        }
                     }
                 }
             }
-            for (let a of armadas) {
-                if (a.codigo === borrarProd.dataset.cod) {
-                    const index = armadas.indexOf(a)
-                    armadas.splice(index, 1)
-                    if(armadas.length > 0){
-                        localStorage.setItem("armadas", JSON.stringify(armadas))
-                    }else{
-                        localStorage.removeItem("armadas")
+            if(armadas){
+                for (let a of armadas) {
+                    if (a.codigo === borrarProd.dataset.cod) {
+                        const index = armadas.indexOf(a)
+                        armadas.splice(index, 1)
+                        if(armadas.length > 0){
+                            localStorage.setItem("armadas", JSON.stringify(armadas))
+                        }else{
+                            localStorage.removeItem("armadas")
+                        }
                     }
                 }
             }
             clearCarro()
-            if(armadas.length == 0 && cajas.length == 0){
-                carritoVacio()
-            }else{
+            if(localStorage.getItem("armadas") || localStorage.getItem("cajas")){
                 renderCarro()
+            }else{
+                carritoVacio()
             }
         })
     }
