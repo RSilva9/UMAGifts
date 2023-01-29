@@ -6,7 +6,7 @@
     @include flex(column, center, center, nowrap);
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
     border-radius: 10px;
-    background-color: #e0dbd4;
+    border: 1px solid rgba(0, 0, 0, 0.199);
     font-family: $secondaryFont;
     margin: 5px;
     transform: rotate(0);
