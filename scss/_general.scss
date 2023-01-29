@@ -11,14 +11,12 @@ nav{
     a{
         display: flex;
         align-items: center;
-        color: white !important;
     }
 }
 
 footer{
     @include flex(row, space-around, flex-start, wrap);
     padding: 15px 0px;
-    // background-color: map-get($map: $paleta, $key: secondary); 
     background-image: url("/img/footer.jpg");
     a{
         color: white;

@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap");
 nav {
-  background-color: #a84d7c;
+  background-color: #c9b58c;
 }
 nav img {
   width: 3em;
@@ -12,7 +12,6 @@ nav img[src="./img/icons/cart.png"] {
 nav a {
   display: flex;
   align-items: center;
-  color: white !important;
 }
 
 footer {
@@ -43,7 +42,7 @@ footer h3 {
 }
 
 body {
-  background-color: #fff5e6;
+  background-color: #ffffff;
 }
 
 a {
@@ -82,7 +81,7 @@ h3 {
 }
 
 .offcanvas {
-  background-color: #a84d7c;
+  background-color: #c9b58c;
 }
 
 .cCard {
@@ -137,8 +136,8 @@ h3 {
 }
 
 .buttn {
-  background-color: #e46ba3;
-  border: 1px solid #70225e;
+  background-color: #c9b58c;
+  border: 0.5px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103);
   font-family: "Poppins", sans-serif;
   font-size: 100%;
@@ -148,7 +147,7 @@ h3 {
 }
 
 .buttn:hover {
-  background-color: #f372b5;
+  background-color: #dfd5c0;
   color: black;
 }
 
@@ -171,12 +170,12 @@ h3 {
 
 .accordion-button:not(.collapsed) {
   color: black;
-  background-color: #a84d7c;
+  background-color: #c9b58c;
 }
 
 .accordion-button {
   color: black;
-  background-color: #a84d7c;
+  background-color: #c9b58c;
 }
 
 .carritoVacio {
@@ -186,6 +185,19 @@ h3 {
   align-items: center;
   flex-wrap: nowrap;
   margin: 150px 0px 400px 0px;
+}
+
+.myCarousel {
+  margin-left: 30px;
+  margin-right: 30px;
+}
+
+.carousel-control-prev {
+  margin-left: -100px !important;
+}
+
+.carousel-control-next {
+  margin-right: -100px !important;
 }
 
 .carousel-control-prev-icon {
