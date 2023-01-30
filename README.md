@@ -48,3 +48,11 @@ Updates:
 **28/01/23**
   - Pantalla agregada para cuando el carrito se encuentra vacío.
   - Cards de index.html reemplazadas por imágenes aleatorias de las cajas prearmadas.
+
+**29/01/23**
+  - Cambios generales de estilo.
+
+**30/01/23**
+  - Carousel de tarjetas de index.html hecho responsive.
+  - Imágenes de BOX actualizadas.
+  - Nueva BOX agregada al stock.
