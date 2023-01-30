@@ -17,9 +17,9 @@
 }
 
 @media (min-width: 768px){
-    // #contentBlock{
-    //     margin: 1% 10%;
-    // }
+    #contentBlock{
+        margin: 1% 10%;
+    }
     #filtros{
         padding: 0px;
     }
@@ -66,16 +66,13 @@
 }
 
 @media (max-width: 767px){
-    .carousel-control-prev {
-    margin-left: -30px !important;
-    }
-    
-    .carousel-control-next {
-    margin-right: -30px !important;
-    }
-
     #cell1, #cell2, #cell3, #cell4, #cell5, #cell6{
-        width: 95%;
+        width: 80%;
+    }
+    .myCarousel {
+        width: 100%;
+        margin-left: 0px;
+        margin-right: 0px;
     }
 }
 

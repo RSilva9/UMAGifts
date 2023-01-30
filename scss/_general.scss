@@ -4,11 +4,12 @@ nav{
     img{
         width: 3em;
     }
-    img[src="./img/icons/cart.png"]{
+    img[src="./img/icons/cartWhite.webp"]{
         width: 2em;
         cursor: pointer;
     }
     a{
+        color: white !important;
         display: flex;
         align-items: center;
     }

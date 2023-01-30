@@ -85,6 +85,7 @@ function renderAll() {
         cardRow.innerHTML +=
             `
             <div class="cCard">
+            <h3 class="mt-2">BOX ${producto.codigo}</h3>
             <img src="${producto.img}" alt="...">
             <a class="buttn btnProds" data-name=${producto.codigo}>Ver más</a>
             </div>

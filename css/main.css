@@ -1,15 +1,16 @@
 @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap");
 nav {
-  background-color: #c9b58c;
+  background-color: #a94d7c;
 }
 nav img {
   width: 3em;
 }
-nav img[src="./img/icons/cart.png"] {
+nav img[src="./img/icons/cartWhite.webp"] {
   width: 2em;
   cursor: pointer;
 }
 nav a {
+  color: white !important;
   display: flex;
   align-items: center;
 }
@@ -81,7 +82,7 @@ h3 {
 }
 
 .offcanvas {
-  background-color: #c9b58c;
+  background-color: #a94d7c;
 }
 
 .cCard {
@@ -168,14 +169,18 @@ h3 {
   text-align: center;
 }
 
+.accCustom button {
+  color: white !important;
+}
+
 .accordion-button:not(.collapsed) {
   color: black;
-  background-color: #c9b58c;
+  background-color: #a94d7c;
 }
 
 .accordion-button {
   color: black;
-  background-color: #c9b58c;
+  background-color: #a94d7c;
 }
 
 .carritoVacio {
@@ -185,6 +190,12 @@ h3 {
   align-items: center;
   flex-wrap: nowrap;
   margin: 150px 0px 400px 0px;
+}
+
+.myCarousel {
+  width: auto;
+  margin-left: 60px;
+  margin-right: 60px;
 }
 
 .carousel-control-prev-icon {
@@ -211,6 +222,7 @@ h3 {
   padding: 10px;
 }
 #filtros h2 {
+  color: white !important;
   font-family: "Poppins", sans-serif;
 }
 #filtros h4 {
@@ -248,15 +260,18 @@ h3 {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  width: 50%;
 }
 #cell1 img, #cell2 img, #cell3 img, #cell4 img, #cell5 img, #cell6 img {
-  width: 100%;
+  width: 90%;
   height: 100%;
 }
 #cell1 div, #cell2 div, #cell3 div, #cell4 div, #cell5 div, #cell6 div {
   width: 50%;
-  margin: 5px 5px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
 }
 
 #franjaTop {
@@ -289,6 +304,9 @@ h3 {
   }
 }
 @media (min-width: 768px) {
+  #contentBlock {
+    margin: 1% 10%;
+  }
   #filtros {
     padding: 0px;
   }
@@ -330,14 +348,13 @@ h3 {
   }
 }
 @media (max-width: 767px) {
-  .carousel-control-prev {
-    margin-left: -30px !important;
-  }
-  .carousel-control-next {
-    margin-right: -30px !important;
-  }
   #cell1, #cell2, #cell3, #cell4, #cell5, #cell6 {
-    width: 95%;
+    width: 80%;
+  }
+  .myCarousel {
+    width: 100%;
+    margin-left: 0px;
+    margin-right: 0px;
   }
 }
 @media screen and (min-width: 425px) and (max-width: 767px) {
