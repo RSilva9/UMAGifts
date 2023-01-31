@@ -56,3 +56,7 @@ Updates:
   - Carousel de tarjetas de index.html hecho responsive.
   - Imágenes de BOX actualizadas.
   - Nueva BOX agregada al stock.
+  
+**31/01/23**
+  - Cambios de estilo (colores y fuentes).
+  - Imagen de carousel reemplazada.
