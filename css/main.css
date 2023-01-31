@@ -1,6 +1,6 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Abel&family=Amatic+SC:wght@400;700&family=Poppins:ital,wght@0,200;0,400;0,600;1,200&family=Source+Sans+Pro:wght@300;400&family=Ubuntu+Condensed&display=swap");
 nav {
-  background-color: #a94d7c;
+  background-color: #7c3359;
 }
 nav img {
   width: 3em;
@@ -43,34 +43,39 @@ footer h3 {
 }
 
 body {
-  background-color: #ffffff;
+  background-color: #f3e8c6;
 }
 
 a {
-  font-family: "Source Sans Pro", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   text-decoration: none;
   cursor: pointer;
   color: black;
 }
 
 h1 {
-  font-family: "Poppins", sans-serif;
-  font-weight: 600;
+  font-family: "Ubuntu Condensed", sans-serif;
+  font-size: 2.7em;
+  color: rgb(75, 75, 75);
 }
 
 h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-size: 1.4em;
 }
 
+h2, h4, h5, li {
+  font-family: "Ubuntu Condensed", sans-serif;
+}
+
 .popup h2 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 600;
   font-size: 1.3em;
   text-align: center;
 }
 .popup h3 {
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 400;
   font-size: 1.1em;
   text-align: start;
@@ -82,7 +87,7 @@ h3 {
 }
 
 .offcanvas {
-  background-color: #a94d7c;
+  background-color: #7c3359;
 }
 
 .cCard {
@@ -137,14 +142,14 @@ h3 {
 }
 
 .buttn {
-  background-color: #c9b58c;
+  background-color: #e7c380;
   border: 0.5px solid black;
   box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103);
-  font-family: "Poppins", sans-serif;
-  font-size: 100%;
+  font-family: "Ubuntu Condensed", sans-serif;
   border-radius: 5px;
   transition: 0.3s;
   padding: 3px;
+  font-size: 1.2em;
 }
 
 .buttn:hover {
@@ -158,7 +163,7 @@ h3 {
 }
 
 .cardColorCheck {
-  background-color: yellow;
+  background-color: #ffe9b9;
 }
 
 .cfSwal {
@@ -175,12 +180,12 @@ h3 {
 
 .accordion-button:not(.collapsed) {
   color: black;
-  background-color: #a94d7c;
+  background-color: #7c3359;
 }
 
 .accordion-button {
   color: black;
-  background-color: #a94d7c;
+  background-color: #7c3359;
 }
 
 .carritoVacio {
@@ -215,10 +220,14 @@ h3 {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.coloredButton {
+  background-color: #69224e !important;
+}
+
 #btnBox {
   position: fixed;
   top: 80px;
-  right: 10px;
+  left: 10px;
   z-index: 999;
   width: 70px;
   height: 70px;
@@ -232,11 +241,10 @@ h3 {
 }
 #filtros h2 {
   color: white !important;
-  font-family: "Poppins", sans-serif;
+  font-family: "Ubuntu Condensed", sans-serif;
 }
-#filtros h4 {
-  font-family: "Poppins", sans-serif;
-  font-size: 1.2em;
+#filtros h3 {
+  font-size: 2em;
 }
 #filtros ul {
   list-style: none;
@@ -245,6 +253,7 @@ h3 {
 }
 #filtros ul li {
   margin: 8px 0px;
+  font-size: 1.1em;
 }
 #filtros button {
   margin-bottom: 15px;
@@ -294,6 +303,10 @@ h3 {
   width: 130px;
 }
 
+#offcanvasBottom h3, #offcanvasBottom h5 {
+  color: white;
+}
+
 @media (max-width: 525px) {
   footer {
     display: flex;
@@ -310,6 +323,9 @@ h3 {
     top: 120px;
     width: 50px;
     height: 50px;
+  }
+  h1 {
+    font-size: 1.8em;
   }
 }
 @media (min-width: 768px) {
@@ -369,5 +385,10 @@ h3 {
 @media screen and (min-width: 425px) and (max-width: 767px) {
   #cell1, #cell2, #cell3, #cell4, #cell5, #cell6 {
     width: 85%;
+  }
+}
+@media (min-width: 992px) {
+  #btnBox {
+    top: 200px;
   }
 }/*# sourceMappingURL=main.css.map */

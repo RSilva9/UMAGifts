@@ -21,16 +21,11 @@ const SwalBtns = (buttons) => {
                         </div>
                         `,
                         showCloseButton: true,
-                        showDenyButton: true,
-                        confirmButtonColor: '#dfbb92',
-                        denyButtonColor: '#9ebc4a',
-                        confirmButtonText: '<i class="fa fa-thumbs-up"></i> Ver en MercadoShops',
-                        denyButtonText: 'Agregar al carrito'
+                        showDenyButton: false,
+                        confirmButtonColor: '#9ebc4a',
+                        confirmButtonText: 'Agregar al carrito',
                     }).then(async (res) => {
                         if (res.isConfirmed) {
-                            window.open(box.link)
-                        } else
-                        if (res.isDenied) {
                             const { value: cantidad } = await Swal.fire({
                                 title: '¿Cuántas BOX querés agregar al carrito?',
                                 input: 'number',
@@ -85,7 +80,7 @@ function renderAll() {
         cardRow.innerHTML +=
             `
             <div class="cCard">
-            <h3 class="mt-2">BOX ${producto.codigo}</h3>
+            <h4 class="mt-2">BOX ${producto.codigo}</h4>
             <img src="${producto.img}" alt="...">
             <a class="buttn btnProds" data-name=${producto.codigo}>Ver más</a>
             </div>

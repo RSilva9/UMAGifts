@@ -52,10 +52,10 @@
     border: 0.5px solid black;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.103);
     font-family: $mainFont;
-    font-size: 100%;
     border-radius: 5px;
     transition: 0.3s;
     padding: 3px;
+    font-size: 1.2em;
 }
 
 .buttn:hover{
@@ -69,7 +69,7 @@
 }
 
 .cardColorCheck{
-    background-color: yellow;
+    background-color: #ffe9b9;
 }
 
 .cfSwal{
@@ -125,12 +125,16 @@
     background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
+.coloredButton{
+    background-color: #69224e !important;
+}
+
 // IDs---------------------------------
 
 #btnBox{
     position: fixed;
     top: 80px;
-    right: 10px;
+    left: 10px;
     z-index: 999;
     width: 70px;
     height: 70px;
@@ -146,9 +150,8 @@
         color: white !important;
         font-family: $mainFont;
     }
-    h4{
-        font-family: $mainFont;
-        font-size: 1.2em;
+    h3{
+        font-size: 2em;
     }
     ul{
         list-style: none;
@@ -157,6 +160,7 @@
         
         li{
             margin: 8px 0px;
+            font-size: 1.1em;
         }
     }
     button{
@@ -200,4 +204,10 @@
     padding: 15px 0px;
     background-image: url("/img/madera.jpg");
     background-size: cover;
+}
+
+#offcanvasBottom{
+    h3, h5{
+        color: white;
+    }
 }

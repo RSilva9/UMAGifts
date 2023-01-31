@@ -14,6 +14,10 @@
         width: 50px;
         height: 50px;
     }
+
+    h1{
+        font-size: 1.8em;
+    }
 }
 
 @media (min-width: 768px){
@@ -79,5 +83,11 @@
 @media screen and (min-width: 425px) and (max-width: 767px){
     #cell1, #cell2, #cell3, #cell4, #cell5, #cell6{
         width: 85%;
+    }
+}
+
+@media (min-width: 992px){
+    #btnBox{
+        top: 200px;
     }
 }

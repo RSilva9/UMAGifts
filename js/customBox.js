@@ -424,6 +424,7 @@ function listener(cajas, vinos, delics){
     const {value: cantidad} = await Swal.fire({
         title: '¿Cuántas BOX querés agregar al carrito?',
         input: 'number',
+        confirmButtonColor: '#9ebc4a',
         confirmButtonText: 'Agregar al carrito',
         inputValidator: (value) => {
             if (!value) {
