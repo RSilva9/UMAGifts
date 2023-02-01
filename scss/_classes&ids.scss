@@ -104,8 +104,8 @@
 
 .myCarousel {
     width: auto;
-    margin-left: 60px;
-    margin-right: 60px;
+    margin-left: 120px;
+    margin-right: 120px;
 }
 
 .carousel-control-prev-icon {
@@ -187,9 +187,10 @@
 
 #cell1, #cell2, #cell3, #cell4, #cell5, #cell6{
     @include flex(row, center, center, nowrap);
+    width: 50%;
     img{
         width: 90%;
-        height: 100%;
+        margin-bottom: 10px;
     }
     div{
         width: 50%;
