@@ -153,7 +153,6 @@ h2, h4, h5, li {
 }
 
 .buttn:hover {
-  background-color: #dfd5c0;
   color: black;
 }
 
@@ -180,12 +179,12 @@ h2, h4, h5, li {
 
 .accordion-button:not(.collapsed) {
   color: black;
-  background-color: #7c3359;
+  background-color: #69224e;
 }
 
 .accordion-button {
   color: black;
-  background-color: #7c3359;
+  background-color: #69224e;
 }
 
 .carritoVacio {
@@ -220,19 +219,26 @@ h2, h4, h5, li {
   background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 0.8%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
 }
 
-.coloredButton {
-  background-color: #69224e !important;
-}
-
 #btnBox {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
   position: fixed;
   top: 80px;
-  left: 10px;
+  left: 20px;
   z-index: 999;
+}
+#btnBox button {
   width: 70px;
   height: 70px;
+  margin-bottom: 5px;
 }
 #btnBox img {
+  width: 75%;
+}
+#btnBox svg {
   width: 75%;
 }
 
@@ -320,9 +326,12 @@ h2, h4, h5, li {
     margin: 10px 0px;
   }
   #btnBox {
-    top: 120px;
-    width: 50px;
-    height: 50px;
+    top: 200px;
+    left: 10px;
+  }
+  #btnBox button {
+    width: 60px;
+    height: 60px;
   }
   h1 {
     font-size: 1.8em;

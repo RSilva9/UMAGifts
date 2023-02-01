@@ -6,6 +6,7 @@ let accCajas = document.querySelector("#accCajas")
 let accVinos = document.querySelector("#accVinos")
 let accDelis = document.querySelector("#accDelis")
 let btnEnd = document.getElementById("btnEnd")
+let btnInfo = document.getElementById("btnHelp")
 
 let offCanvasCaja = document.getElementById("offCanvasCaja")
 let offCanvasVinos = document.getElementById("offCanvasVinos")
@@ -450,3 +451,20 @@ function listener(cajas, vinos, delics){
     }
 }
 
+btnHelp.onclick = ()=>{
+    if(window.screen.width > 425){
+        Swal.fire({
+            width: 1000,
+            height: 720,
+            html: '<img src="./img/infoCustomBox.jpg" width="100%" height="100%" alt="">',
+            showConfirmButton: false
+        })
+    }else{
+        Swal.fire({
+            width: 1000,
+            height: 720,
+            html: '<img src="./img/infoCustomBoxMobile.jpg" width="100%" height="100%" alt="">',
+            showConfirmButton: false
+        })
+    }
+}
