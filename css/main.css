@@ -22,7 +22,7 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 15px 0px;
-  background-image: url("/img/footer.jpg");
+  background-image: url("/img/footer.webp");
 }
 footer a {
   color: white;
@@ -302,7 +302,7 @@ h2, h4, h5, li {
   display: flex;
   justify-content: center;
   padding: 15px 0px;
-  background-image: url("/img/madera.jpg");
+  background-image: url("/img/madera.webp");
   background-size: cover;
 }
 #franjaTop img {

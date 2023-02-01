@@ -456,14 +456,14 @@ btnHelp.onclick = ()=>{
         Swal.fire({
             width: 1000,
             height: 720,
-            html: '<img src="./img/infoCustomBox.jpg" width="100%" height="100%" alt="">',
+            html: '<img src="./img/infoCustomBox.webp" width="100%" height="100%" alt="">',
             showConfirmButton: false
         })
     }else{
         Swal.fire({
             width: 1000,
             height: 720,
-            html: '<img src="./img/infoCustomBoxMobile.jpg" width="100%" height="100%" alt="">',
+            html: '<img src="./img/infoCustomBoxMobile.webp" width="100%" height="100%" alt="">',
             showConfirmButton: false
         })
     }
