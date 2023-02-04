@@ -21,6 +21,12 @@
     h1{
         font-size: 1.8em;
     }
+
+    #cmColumn{
+        img{
+            width: 100%;
+        }
+    }
 }
 
 @media (min-width: 768px){
@@ -41,6 +47,19 @@
         grid-template-columns: repeat(3,1fr);
         grid-template-rows: auto;
         grid-gap: 1rem;
+    }
+    #cmColumn{
+        height: 100%;
+        margin-left: 5px;
+        img{
+            width: 95%;
+        }
+        div{
+            margin: 5px 0px;
+        }
+    }
+    #cmIframe{
+        width: 100%;
     }
 }
 
@@ -82,6 +101,12 @@
         margin-right: 0px;
         padding-left: 20px;
         padding-right: 20px;
+    }
+    #cmColumn{
+        @include flex(column, center, center, nowrap);
+        img{
+            width: 70%;
+        }
     }
 }
 
