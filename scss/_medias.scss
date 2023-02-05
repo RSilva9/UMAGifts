@@ -108,6 +108,12 @@
             width: 70%;
         }
     }
+    .hiddenCarousel{
+        display: block;
+    }
+    .mainCarousel{
+        display: none;
+    }
 }
 
 @media screen and (min-width: 425px) and (max-width: 767px){
