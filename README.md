@@ -28,7 +28,7 @@ Updates:
   - Prueba de ver como funciona reemplazar los archivos json por archivos js.
 
 **08/01/23**
-  - Cambios a "Armá tu box".
+  - Cambios a "Armá tu box":
     + Agregado un display "offcanvas" para ver como se arma la box a medida que se agregan productos.
   - Más pruebas eliminando archivo json de productos individuales.
 
@@ -63,6 +63,11 @@ Updates:
 
 **04/01/23**
   - Imagen de carousel reemplazada.
-  - Nuevos elementos en index.
+  - Nuevos elementos en index:
     + Franja con información sobre envíos y ubicación.
     + Franja con redirección a Instagram.
+
+**05/01/23**
+  - Nuevos elementos en form de carrito:
+    + Checkbox para solicitar envío a domicilio.
+    + Inputs para ingresar barrio y dirección.
