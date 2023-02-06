@@ -60,3 +60,9 @@ Updates:
 **31/01/23**
   - Cambios de estilo (colores y fuentes).
   - Imagen de carousel reemplazada.
+
+**04/01/23**
+  - Imagen de carousel reemplazada.
+  - Nuevos elementos en index.
+    + Franja con información sobre envíos y ubicación.
+    + Franja con redirección a Instagram.
