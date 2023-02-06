@@ -3,6 +3,10 @@ const armadasDisplay = document.getElementById("armadasDisplay")
 const enviar = document.getElementById("enviar")
 const nombre = document.getElementById("nombre")
 const email = document.getElementById("email")
+const envio = document.getElementById("envio")
+const envRet = document.getElementById("envRet")
+const barrio = document.getElementById("barrio")
+const calle = document.getElementById("calle")
 const carrito = document.getElementById("carrito")
 const formPedido = document.getElementById("formPedido")
 const contentBlock = document.getElementById("contentBlock")
@@ -122,6 +126,10 @@ function renderCarro() {
 
             customBoxDisplay.appendChild(divBox)
         })
+    }else{
+        let divBox = document.createElement("div")
+        divBox.innerHTML = "<h5>N/A</h5>"
+        customBoxDisplay.appendChild(divBox)
     }
 
     if (localStorage.getItem("armadas")) {
@@ -136,7 +144,7 @@ function renderCarro() {
                         <div class="d-flex flex-row flex-grow-1 pb-1 w-100" id="cell">
                             <img src=${prod.img} alt="Box prearmada">
                             <div class="m-2 flex-grow-1">
-                                <h3>BOX de ${prod.tipo} ${prod.tam}</h3>
+                                <h3>${prod.codigo}: BOX de ${prod.tipo} ${prod.tam}</h3>
                                 <button class="buttn" type="button" data-bs-toggle="collapse" data-bs-target="#collapseExample${prod.codigo}" aria-expanded="false" aria-controls="collapseExample">
                                     Ver detalles
                                 </button>
@@ -164,6 +172,10 @@ function renderCarro() {
             })
             armadasDisplay.appendChild(divBox)
         })
+    }else{
+        let divBox = document.createElement("div")
+        divBox.innerHTML = "<h5>N/A</h5>"
+        armadasDisplay.appendChild(divBox)
     }
 
     assignListener()
@@ -275,3 +287,25 @@ function carritoVacio(){
     `
     contentBlock.appendChild(div)
 }
+
+let inputs = document.querySelectorAll("#envRet input")
+
+envio.addEventListener('click', ()=>{
+    
+    if(envio.checked){
+        envRet.classList.remove("d-none")
+        envRet.setAttribute("id", "envRet")
+
+        inputs.forEach(i=>{
+            i.setAttribute("required", "")
+        })
+    }else{
+        envRet.classList.add("d-none")
+        envRet.removeAttribute("id")
+
+        inputs.forEach(i=>{
+            i.removeAttribute("required")
+            i.value = ""
+        })
+    }
+})

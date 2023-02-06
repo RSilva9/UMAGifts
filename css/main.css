@@ -23,6 +23,7 @@ footer {
   flex-wrap: wrap;
   padding: 15px 0px;
   background-image: url("/img/footer.webp");
+  margin-top: auto;
 }
 footer a {
   color: white;
@@ -44,6 +45,9 @@ footer h3 {
 
 body {
   background-color: #f3e8c6;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
 }
 
 a {
@@ -364,6 +368,49 @@ h2, h4, h5, li {
   height: 100%;
 }
 
+#formPedido {
+  background-color: white;
+  padding: 15px;
+}
+#formPedido form {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: nowrap;
+}
+#formPedido form input {
+  margin: 2px 0px;
+}
+#formPedido #nombreCorreo {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#formPedido #radiosRetiro {
+  margin: 0px 15px;
+}
+#formPedido #radiosRetiro div {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+  margin: 5px 0px;
+}
+#formPedido #envRet {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#formPedido #divBoton {
+  margin: auto 0px auto auto;
+}
+
 @media (max-width: 525px) {
   footer {
     display: flex;
@@ -391,7 +438,7 @@ h2, h4, h5, li {
     width: 100%;
   }
 }
-@media (min-width: 768px) {
+@media (min-width: 865px) {
   #contentBlock {
     margin: 1% 10%;
   }

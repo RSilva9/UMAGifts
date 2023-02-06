@@ -251,3 +251,36 @@
         height: 100%;
     }
 }
+
+#formPedido{
+    background-color: white;
+    padding: 15px;
+
+    form{
+        @include flex(row, flex-start, flex-start, nowrap);
+        input{
+            margin: 2px 0px;
+        }
+    }
+
+    #nombreCorreo{
+        @include flex(column, center, center, nowrap);
+    }
+
+    #radiosRetiro{
+        margin: 0px 15px;
+        div{
+            @include flex(row, center, center, nowrap);
+            margin: 5px 0px;
+        }
+    }
+    
+    #envRet{
+        @include flex(column, center, center, nowrap);
+    }
+
+    #divBoton{
+        margin: auto 0px auto auto;
+    }
+
+}

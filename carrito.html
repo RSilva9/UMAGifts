@@ -17,7 +17,7 @@
     <script>
         new WOW().init();
     </script>
-    
+
     <div id="franjaTop">
         <a class="navbar-brand" href="index.html">
             <img src="img/logoUMAv2_sinFondo.png" alt="Logo UMA">
@@ -61,7 +61,7 @@
             <h1>Carrito</h1>
 
             <div>
-                <h2>Tu(s) BOX personalizada(s)</h2>
+                <h2>Tus BOX personalizadas</h2>
                 <div id="customBoxDisplay">
 
                 </div>
@@ -78,13 +78,30 @@
 
         </section>
 
-        <div class="bg-white p-3" id="formPedido">
-            <form class="d-flex flex-column align-items-start" action="https://formsubmit.co/umaregalos@gmail.com" method="POST">
-                    <input type="text" name="name" id="nombre" placeholder="Nombre" required>
-                    <input type="text" name="email" id="email" placeholder="Correo" required>
-                    <textarea name="pedido" id="pedido" class="d-none"></textarea>
-                </p>
-                <button class="buttn" type="submit" name="submit" id="enviar">Enviar pedido</button>
+        <div id="formPedido">
+            <form action="https://formsubmit.co/umaregalos@gmail.com" method="POST">
+                <div class="d-flex flex-column flex-sm-row justify-content-evenly flex-grow-1">
+                    <div id="nombreCorreo">
+                        <input type="text" name="name" id="nombre" placeholder="Nombre" required>
+                        <input type="text" name="email" id="email" placeholder="Correo" required>
+                    </div>
+                    <div class="d-flex flex-column flex-md-row">
+                        <div id="radiosRetiro">
+                            <div>
+                                <input type="checkbox" name="envio" id="envio">
+                                <h5 class="ms-1 my-auto">Envío a domicilio</h5>
+                            </div>
+                        </div>
+                        <div id="envRet" class="d-none">
+                            <input type="text" name="Barrio" id="barrio" placeholder="Barrio">
+                            <input type="text" name="Direccion" id="direccion" placeholder="Calle y número">
+                        </div>
+                    </div>
+                </div>
+                <div id="divBoton">
+                    <button class="buttn" type="submit" name="submit" id="enviar">Enviar pedido</button>
+                </div>
+                <textarea name="pedido" id="pedido" class="d-none"></textarea>
             </form>
         </div>
 
