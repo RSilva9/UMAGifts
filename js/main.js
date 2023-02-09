@@ -30,9 +30,10 @@ const SwalBtns = (buttons) => {
                                 title: '¿Cuántas BOX querés agregar al carrito?',
                                 input: 'number',
                                 confirmButtonText: 'Agregar al carrito',
+                                confirmButtonColor: '#9ebc4a',
                                 inputValidator: (value) => {
-                                    if (!value) {
-                                        return 'Indicá una cantidad'
+                                    if (!value || value <= 0) {
+                                        return 'Indicá una cantidad válida'
                                     }
                                 }
                             })
@@ -59,7 +60,16 @@ const SwalBtns = (buttons) => {
 
                                 Swal.fire({
                                     icon: 'success',
+                                    confirmButtonColor: '#9ebc4a',
+                                    denyButtonColor: '#7c3359',
+                                    confirmButtonText: 'Seguir comprando',
+                                    denyButtonText: 'Ir al carrito',
+                                    showDenyButton: true,
                                     title: `Agregaste ${cantidad} BOX al carrito`,
+                                }).then((res)=>{
+                                    if(res.isDenied){
+                                        location.href = "carrito.html" 
+                                    }
                                 })
                             }
                         }

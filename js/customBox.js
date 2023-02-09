@@ -428,8 +428,8 @@ function listener(cajas, vinos, delics){
         confirmButtonColor: '#9ebc4a',
         confirmButtonText: 'Agregar al carrito',
         inputValidator: (value) => {
-            if (!value) {
-                return 'Indicá una cantidad'
+            if (!value || value <= 0) {
+                return 'Indicá una cantidad válida'
             }
         }
     })
@@ -441,10 +441,17 @@ function listener(cajas, vinos, delics){
         
         Swal.fire({
             icon: 'success',
+            confirmButtonColor: '#9ebc4a',
+            denyButtonColor: '#7c3359',
+            confirmButtonText: 'Seguir comprando',
+            denyButtonText: 'Ir al carrito',
+            showDenyButton: true,
             title: `Agregaste ${cantidad} BOX al carrito`,
         }).then((result)=>{
             if(result.isConfirmed || result.dismiss){
                 window.location.reload()
+            }else{
+                location.href = "carrito.html"
             }
         })
         

@@ -186,7 +186,7 @@ function assignListener() {
     if (borrarProd.length > 1) {
         for (let b of borrarProd) {
             b.addEventListener('click', () => {
-                if(cajas.length > 0){
+                if(cajas && cajas.length > 0){
                     for (let c of cajas) {
                         if (c.codigo == b.dataset.cod) {
                             const index = cajas.indexOf(c)
@@ -199,7 +199,7 @@ function assignListener() {
                         }
                     }
                 }
-                if(armadas.length > 0){
+                if(armadas && armadas.length > 0){
                     for (let a of armadas) {
                         if (a.codigo === b.dataset.cod) {
                             const index = armadas.indexOf(a)
