@@ -61,13 +61,17 @@ Updates:
   - Cambios de estilo (colores y fuentes).
   - Imagen de carousel reemplazada.
 
-**04/01/23**
+**04/02/23**
   - Imagen de carousel reemplazada.
   - Nuevos elementos en index:
     + Franja con información sobre envíos y ubicación.
     + Franja con redirección a Instagram.
 
-**05/01/23**
+**05/02/23**
   - Nuevos elementos en form de carrito:
     + Checkbox para solicitar envío a domicilio.
     + Inputs para ingresar barrio y dirección.
+    
+**09/02/23**
+  - Fix a problemas con carrito.
+  - Cambios a algunos botones de compra.
