@@ -75,3 +75,9 @@ Updates:
 **09/02/23**
   - Fix a problemas con carrito.
   - Cambios a algunos botones de compra.
+
+**13/02/23**
+  - Cambio de foto en carousel.
+  - Nuevos botones de navegación agregados a index.
+  - Nueva pantalla con todos los productos.
+  - Nombre de la pantalla "Productos" cambiado a "BOX prearmadas".
