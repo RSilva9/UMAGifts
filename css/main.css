@@ -44,7 +44,7 @@ footer h3 {
 }
 
 body {
-  background-color: #f3e8c6;
+  background-color: #f0e6c7;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -411,6 +411,36 @@ h2, h4, h5, li {
   margin: auto 0px auto auto;
 }
 
+#botonesIndex {
+  background-color: #7c3359;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+  flex-wrap: nowrap;
+  min-height: 20vh;
+  padding: 15px;
+}
+#botonesIndex h2 {
+  color: white;
+  margin: 0px;
+}
+#botonesIndex a {
+  background-color: #69224e;
+  width: 100%;
+  height: 20vh;
+  margin: 0px 5px;
+  transition: 0.3s;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: nowrap;
+}
+#botonesIndex a:hover {
+  background-color: #88466f;
+}
+
 @media (max-width: 525px) {
   footer {
     display: flex;
@@ -521,6 +551,23 @@ h2, h4, h5, li {
   }
   .mainCarousel {
     display: none;
+  }
+  #botonesIndex {
+    background-color: #7c3359;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+    flex-wrap: nowrap;
+    padding: 0px;
+    max-height: 5vh;
+  }
+  #botonesIndex a {
+    margin: 2px 0px;
+    min-height: 5vh;
+  }
+  #botonesIndex a h2 {
+    align-self: center;
   }
 }
 @media screen and (min-width: 425px) and (max-width: 767px) {

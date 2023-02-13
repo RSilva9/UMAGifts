@@ -59,53 +59,41 @@
     </nav>
 
     <main id="contentBlock">
+        <h1 class="text-center m-4">Todos nuestros productos</h1>
 
-        <section id="carrito">
-            <h1>Carrito</h1>
+        <div class="accordion accCustom rounded-top rounded-bottom" id="accordionPanelsStayOpenExample">
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        BOTELLAS
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body accGrid" id="accVinos">
 
-            <div>
-                <h2>Tus BOX personalizadas</h2>
-                <div id="customBoxDisplay">
 
-                </div>
-            </div>
-
-            <hr>
-
-            <div>
-                <h2>Box prearmadas</h2>
-                <div id="armadasDisplay">
-
-                </div>
-            </div>
-
-        </section>
-
-        <div id="formPedido">
-            <form action="https://formsubmit.co/umaregalos@gmail.com" method="POST">
-                <div class="d-flex flex-column flex-sm-row justify-content-evenly flex-grow-1">
-                    <div id="nombreCorreo">
-                        <input type="text" name="name" id="nombre" placeholder="Nombre" required>
-                        <input type="text" name="email" id="email" placeholder="Correo" required>
-                    </div>
-                    <div class="d-flex flex-column flex-md-row">
-                        <div id="radiosRetiro">
-                            <div>
-                                <input type="checkbox" name="envio" id="envio">
-                                <h5 class="ms-1 my-auto">Envío a domicilio</h5>
-                            </div>
-                        </div>
-                        <div id="envRet" class="d-none">
-                            <input type="text" name="Barrio" id="barrio" placeholder="Barrio">
-                            <input type="text" name="Direccion" id="direccion" placeholder="Calle y número">
-                        </div>
                     </div>
                 </div>
-                <div id="divBoton">
-                    <button class="buttn" type="submit" name="submit" id="enviar">Enviar pedido</button>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        PRODUCTOS GOURMET
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body accGrid" id="accDelis">
+
+
+                    </div>
                 </div>
-                <textarea name="pedido" id="pedido" class="d-none"></textarea>
-            </form>
+            </div>
         </div>
 
     </main>
@@ -145,7 +133,52 @@
     </footer>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
-    <script type="module" src="js/carrito.js"></script>
+    <script type="module">
+
+    async function getStock(){
+        const response = await fetch("./json/productos.json")
+        return response.json();
+    }
+
+    const prodStock = await getStock()
+
+    renderProds()
+
+    function renderProds() {  
+    let accVinos = document.querySelector("#accVinos")
+    let accDelis = document.querySelector("#accDelis")
+
+    accVinos.innerHTML = ""
+    accDelis.innerHTML = ""
+
+    prodStock.forEach((item)=>{
+        if(item.tipo == "bebida"){
+            let cards = document.createElement("div")
+            cards.innerHTML =
+            `
+            <div class="cCard h-100 pb-3 px-2" id="vino">
+            <input id="cajaInput" type="checkbox" name="vino" class="stretched-link">
+            <img src="${item.img}" alt="...">
+            <h2>${item.nombre}</h2>
+            </div>
+            `
+            accVinos.append(cards)
+        }
+        if(item.tipo == "deli"){
+            let cards = document.createElement("div")
+            cards.innerHTML =
+            `
+            <div class="cCard h-100 pb-3 px-2" id="deli" data-size=${item.size}>
+            <input id="cajaInput" type="checkbox" name="deli" class="stretched-link" data-code=${item.codigo}>
+            <img src="${item.img}" alt="...">
+            <h2>${item.nombre}</h2>
+            </div>
+            `
+            accDelis.append(cards)
+        }
+    })
+}
+    </script>
 </body>
 
 </html>

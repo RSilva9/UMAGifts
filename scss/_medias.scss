@@ -115,6 +115,19 @@
         display: none;
     }
 
+    #botonesIndex{
+        background-color: map-get($map: $paleta, $key: secondary);
+        @include flex(column, flex-start, center, nowrap);
+        padding: 0px;
+        max-height: 5vh;
+        a{
+            margin: 2px 0px;
+            min-height: 5vh;
+            h2{
+                align-self: center;
+            }
+        }
+    }
 }
 
 @media screen and (min-width: 425px) and (max-width: 767px){

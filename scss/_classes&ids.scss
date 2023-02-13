@@ -283,3 +283,25 @@
     }
 
 }
+
+#botonesIndex{
+    background-color: map-get($map: $paleta, $key: secondary);
+    @include flex(row, space-around, center, nowrap);
+    min-height: 20vh;
+    padding: 15px;
+    h2{
+        color: white;
+        margin: 0px;
+    }
+    a{
+        background-color: map-get($map: $paleta, $key: darkerSecondary);
+        width: 100%;
+        height: 20vh;
+        margin: 0px 5px;
+        transition: 0.3s;
+        @include flex(row, center, center, nowrap);
+    }
+    a:hover{
+        background-color: #88466f;
+    }
+}
