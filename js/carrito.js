@@ -10,10 +10,12 @@ const calle = document.getElementById("calle")
 const carrito = document.getElementById("carrito")
 const formPedido = document.getElementById("formPedido")
 const contentBlock = document.getElementById("contentBlock")
+const total = document.getElementById("total")
 const cajas = JSON.parse(localStorage.getItem("cajas"))
 const armadas = JSON.parse(localStorage.getItem("armadas"))
 let pedido = document.getElementById("pedido")
 let lista = ``
+let precioTotal = 0
 
 async function getStock() {
     const response = await fetch("./json/box.json")
@@ -34,6 +36,7 @@ if(localStorage.getItem("armadas") || localStorage.getItem("cajas")){
 
 function renderCarro() {
     lista = ``
+    precioTotal = 0
     
     if (localStorage.getItem("cajas")) {
         cajas.forEach(caja => {
@@ -75,6 +78,10 @@ function renderCarro() {
                         </div>
                     </div>
                     <div class="d-flex flex-row mt-2">
+                        <div class="d-flex flex-column align-items-center me-2">
+                            <h3>Precio:</h3>
+                            <h3>$${caja.precio}</h3>
+                        </div>
                         <div class="d-flex flex-column align-items-center">
                             <h3>Cantidad:</h3>
                             <h3>${caja.cantidad}</h3>
@@ -88,7 +95,8 @@ function renderCarro() {
                 </div>
                 `
 
-                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} || ${caja.deli.deliUno}, ${caja.deli.deliDos}, ${caja.deli.deliTres}, ${caja.deli.deliCuatro} /// CANTIDAD: ${caja.cantidad}\n`
+                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} || ${caja.deli.deliUno}, ${caja.deli.deliDos}, ${caja.deli.deliTres}, ${caja.deli.deliCuatro} /// CANTIDAD: ${caja.cantidad} /// PRECIO: $${caja.precio}\n\n`
+                precioTotal += caja.precio*caja.cantidad
             } else {
                 divBox.innerHTML =
                     `
@@ -107,6 +115,10 @@ function renderCarro() {
                     </div>
                 </div>
                 <div class="d-flex flex-row mt-2">
+                    <div class="d-flex flex-column align-items-center me-2">
+                        <h3>Precio:</h3>
+                        <h3>$${caja.precio}</h3>
+                    </div>
                     <div class="d-flex flex-column align-items-center">
                         <h3>Cantidad:</h3>
                         <h3>${caja.cantidad}</h3>
@@ -120,7 +132,8 @@ function renderCarro() {
             </div>
             `
 
-                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} /// CANTIDAD: ${caja.cantidad}\n`
+                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} /// CANTIDAD: ${caja.cantidad} /// PRECIO: $${caja.precio}\n\n`
+                precioTotal += caja.precio*caja.cantidad
             }
 
 
@@ -154,6 +167,10 @@ function renderCarro() {
                             </div>
                         </div>
                         <div class="d-flex flex-row mt-2">
+                            <div class="d-flex flex-column align-items-center me-2">
+                                <h3>Precio:</h3>
+                                <h3>$${arm.precio}</h3>
+                            </div>
                             <div class="d-flex flex-column align-items-center">
                                 <h3>Cantidad:</h3>
                                 <h3>${arm.cant}</h3>
@@ -167,7 +184,8 @@ function renderCarro() {
                     </div>
                     `
 
-                    lista += `○ Box ${arm.codigo} /// CANTIDAD: ${arm.cant} \n`
+                    lista += `○ Box ${arm.codigo} /// CANTIDAD: ${arm.cant} /// PRECIO: $${arm.precio}\n\n`
+                    precioTotal += arm.precio*arm.cant
                 }
             })
             armadasDisplay.appendChild(divBox)
@@ -179,7 +197,10 @@ function renderCarro() {
     }
 
     assignListener()
-    pedido.value = lista   
+
+    pedido.value = lista
+    pedido.value += `\n\n PRECIO TOTAL: $${precioTotal}`
+    total.textContent = `$${precioTotal}`
 }
 
 function assignListener() {
@@ -196,6 +217,7 @@ function assignListener() {
                             }else{
                                 localStorage.removeItem("cajas")
                             }
+                            precioTotal -= c.precio*c.cantidad
                         }
                     }
                 }
@@ -209,6 +231,7 @@ function assignListener() {
                             }else{
                                 localStorage.removeItem("armadas")
                             }
+                            precioTotal -= a.precio*a.cant
                         }
                     }
                 }    
@@ -232,6 +255,7 @@ function assignListener() {
                         }else{
                             localStorage.removeItem("cajas")
                         }
+                        precioTotal -= c.precio*c.cantidad
                     }
                 }
             }
@@ -245,6 +269,7 @@ function assignListener() {
                         }else{
                             localStorage.removeItem("armadas")
                         }
+                        precioTotal -= a.precio*a.cant
                     }
                 }
             }

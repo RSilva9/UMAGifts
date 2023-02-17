@@ -2,226 +2,226 @@
     {
         "codigo": "101",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1254795438-regalos-empresariales-vino-rutini-malbec-salentein-malbec-_JM#position=24&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box101.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 11790
     },
     {
         "codigo": "102",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 D.V. CATENA Malbec</h3><h3>+1 Luigi Bosca Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1260998568-regalo-empresarial-vino-dv-catena-malbec-luigi-bosca-malb-_JM#position=25&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box102.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 11750
     },
     {
         "codigo": "103",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 D.V. CATENA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1260895666-regalo-empresarial-vino-rutini-malbec-dv-catena-malbec-_JM#position=7&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box103.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 15435
     },
     {
         "codigo": "104",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 TRUMPETER Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1261478662-regalo-empresarial-vino-escorihuela-gascon-trumpeter-malbec-_JM#position=15&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box104.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 5724
     },
     {
         "codigo": "105",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1260915015-regalo-empresarial-vino-rutini-malbec-delicatessen-_JM#position=21&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box105.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 13678
     },
     {
         "codigo": "106",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 LUGI BOSCA</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1260896071-regalo-empresarial-vino-luigi-bosca-malbec-delicatessen-_JM#position=11&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box106.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 9990
     },
     {
         "codigo": "107",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 D.V. CATENA Malbec Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1260921742-regalo-empresarial-vino-dv-catena-malbec-delicatessen-_JM#position=12&search_layout=stack&type=item&tracking_id=3e244f64-83e0-480c-8260-7988340f8b61",
         "img": "./img/box/box107.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 12920
     },
     {
         "codigo": "108",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1261853664-reg-empresarial-vino-escorihuela-gascon-malbec-delicatessen-_JM#position=13&search_layout=stack&type=item&tracking_id=17911d60-a882-4ee1-bc39-41a768800471",
         "img": "./img/box/box108.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 9140
     },
     {
         "codigo": "109",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 TRUMPETER Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1260915352-regalo-empresarial-vino-trumpeter-malbec-delicatessen-_JM#position=5&search_layout=stack&type=item&tracking_id=17911d60-a882-4ee1-bc39-41a768800471",
         "img": "./img/box/box109.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 9230
     },
     {
         "codigo": "110",
         "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 LUIGI BOSCA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1261856346-regaloempresarial-vino-escorihuelagascon-malbec-luigibosca-_JM#position=1&search_layout=stack&type=item&tracking_id=e4c6133e-3a4e-4157-934b-33a12b05763b",
         "img": "./img/box/box110.webp",
         "tipo": "carton",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 6700
     },
     {
         "codigo": "111",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 RUTINI Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1262147523-regalo-empresarial-vino-rutini-malbec-_JM#position=16&search_layout=stack&type=item&tracking_id=17911d60-a882-4ee1-bc39-41a768800471",
         "img": "./img/box/box111.webp",
         "tipo": "madera",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 8890
     },
     {
         "codigo": "112",
         "text": "<div class=\"popup\"><h2>BOLSA DE CARTÓN</h2><h3>+1 LUIGI BOSCA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1262051070-regalos-empresariales-vino-luigi-bosca-malbec--_JM#position=9&search_layout=stack&type=item&tracking_id=17911d60-a882-4ee1-bc39-41a768800471",
         "img": "./img/box/box112.webp",
         "tipo": "bolsa",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 3214
     },
     {
         "codigo": "113",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1262109888-regalos-empresariales-vino-salentein-malbec-_JM#position=6&search_layout=stack&type=item&tracking_id=17911d60-a882-4ee1-bc39-41a768800471",
         "img": "./img/box/box113.webp",
         "tipo": "madera",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 4500
     },
     {
         "codigo": "114",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 NIETO SENETINER Extra Brut</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1262697806-regalos-empresariales-espumante-nieto-senetiner-extra-brut-_JM#position=1&search_layout=stack&type=item&tracking_id=17911d60-a882-4ee1-bc39-41a768800471",
         "img": "./img/box/box114.webp",
         "tipo": "madera",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 4700
     },
     {
         "codigo": "115",
         "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN SIMPLE</h2><h3>+1 RUTINI Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264895197-regalos-empresariales-vino-rutini-malbec-_JM#position=20&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box115.webp",
         "tipo": "carton",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 7800
     },
     {
         "codigo": "116",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 SALENTEIN Malbec</h3><h3>+1 Mermelada de arándanos orgánicos - Estancia Las Quinas (Sin T.A.C)</h3><h3>+1 Cebollas al Malbec - Juliana López May</h3><h3>+1 Mermelada orgánica de Saúco - Cuyen</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264818401-vino-salentein-malbec-delicatessen-estuche-madera-regalo-_JM#position=4&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box116.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 8000
     },
     {
         "codigo": "117",
         "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 DV CATENA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264895327-regalo-empresarial-vino-rutini-malbec-dv-catena-malbec-_JM#position=8&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box117.webp",
         "tipo": "carton",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 13800
     },
     {
         "codigo": "118",
         "text": "<div class=\"popup\"><h2>BOLSA DE CARTÓN</h2><h3>+1 RUTINI Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264895427-vino-rutini-malbec-bolsa-de-carton-individual-regalos-_JM#position=23&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box118.webp",
         "tipo": "bolsa",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 6890
     },
     {
         "codigo": "119",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 Espumante NIETO SENETINER EXTRA BRUT</h3><h3>+1 Sidra 1888</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264812131-regalos-empresariales-espumantes-nieto-senetiner-sidra1888-_JM#position=2&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box119.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": false
+        "deli": false,
+        "precio": 6895
     },
     {
         "codigo": "120",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 TRUMPETER Malbec</h3><h3>+1 Pasta de aceitunas negras - Terra Sana</h3><h3>+1 Berenjenas en escabeche - Famiglia Gullo</h3><h3>+1 Nueces duradas mariposas ámbar - El Castaño</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264818606-regalos-empresariales-vino-trumpeter-malbec-delicatessen-_JM#position=17&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box120.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 7970
     },
     {
         "codigo": "121",
         "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN SIMPLE</h2><h3>+1 TRUMPETER Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264895544-vino-trumpeter-en-estuche-de-carton-regalos-empresariales-_JM#position=10&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box121.webp",
         "tipo": "carton",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 3358
     },
     {
         "codigo": "122",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 Aceitunas verdes rellenas con morrón - Nucete</h3><h3>+1 Aceitunas negras en salmuera - Nucete</h3><h3>+1 Dip del bosque con hongos al malbec - Valleverde</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264825139-vino-escorihuela-gascon-malbec-delicatessen-regalos-_JM#position=18&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box122.webp",
         "tipo": "madera",
         "tam": "doble",
-        "deli": true
+        "deli": true,
+        "precio": 7500
     },
     {
         "codigo": "123",
         "text": "<div class=\"popup\"><h2>BOLSA DE CARTÓN</h2><h3>+ 1 SALENTEIN RESERVA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264825200-vino-salentein-malbec-en-bolsita-de-carton-regalos-_JM#position=19&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box123.webp",
         "tipo": "bolsa",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 2500
     },
     {
         "codigo": "124",
         "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 D.V. CATENA Malbec Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1264825191-regalo-empresarial-vino-d-v-catena-malbec-malbec-_JM#position=22&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box124.webp",
         "tipo": "madera",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 8130
     },
     {
         "codigo": "125",
         "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN SIMPLE</h2><h3>+1 LUIGI BOSCA Malbec</h3></div>",
-        "link": "https://regalosuma20221121184620.mercadoshops.com.ar/MLA-1275936468-vino-luigi-bosca-malbec-estuche-de-carton-ideal-regalo-_JM#position=14&search_layout=stack&type=item&tracking_id=dcba3326-8bf4-4321-a59d-1d1c132b0a41",
         "img": "./img/box/box125.webp",
         "tipo": "carton",
         "tam": "simple",
-        "deli": false
+        "deli": false,
+        "precio": 4123
     }
 ]

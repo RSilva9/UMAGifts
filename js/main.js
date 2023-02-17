@@ -18,6 +18,7 @@ const SwalBtns = (buttons) => {
                         <div class="popup">
                         <img src="${box.img}">
                         ${box.text}
+                        <h4 class="mt-2">$${box.precio}</h4>
                         </div>
                         `,
                         showCloseButton: true,
@@ -49,7 +50,8 @@ const SwalBtns = (buttons) => {
 
                                 const addedBox = {
                                     cant: Number(cantidad),
-                                    codigo: btn.dataset.name
+                                    codigo: btn.dataset.name,
+                                    precio: box.precio
                                 }
 
                                 if(existe == false){
@@ -90,7 +92,8 @@ function renderAll() {
         cardRow.innerHTML +=
             `
             <div class="cCard">
-            <h4 class="mt-2">BOX ${producto.codigo}</h4>
+            <h3 class="mt-2">BOX ${producto.codigo}</h3>
+            <h5>$${producto.precio}</h5>
             <img src="${producto.img}" alt="...">
             <a class="buttn btnProds" data-name=${producto.codigo}>Ver más</a>
             </div>
@@ -143,8 +146,10 @@ deli.addEventListener('change', () => {
                 let cardRow = document.createElement('div')
 
                 cardRow.innerHTML +=
-                    `
-                <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
+                `
+                <div class="cCard">
+                <h3 class="mt-2">BOX ${box.codigo}</h3>
+                <h5>$${box.precio}</h5>
                 <img src="${box.img}" alt="...">
                 <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
                 </div>
@@ -210,8 +215,10 @@ function renderTipo(tId, tmId, del) {
                 let cardRow = document.createElement('div')
 
                 cardRow.innerHTML +=
-                    `
-                <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
+                `
+                <div class="cCard">
+                <h3 class="mt-2">BOX ${box.codigo}</h3>
+                <h5>$${box.precio}</h5>
                 <img src="${box.img}" alt="...">
                 <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
                 </div>
@@ -224,8 +231,10 @@ function renderTipo(tId, tmId, del) {
                 let cardRow = document.createElement('div')
 
                 cardRow.innerHTML +=
-                    `
-                <div class="cCard wow fadeInDown" data-wow-delay="0.1s" data-name=${box.tipo}>
+                `
+                <div class="cCard">
+                <h3 class="mt-2">BOX ${box.codigo}</h3>
+                <h5>$${box.precio}</h5>
                 <img src="${box.img}" alt="...">
                 <a class="buttn btnProds" data-name=${box.codigo}>Ver más</a>
                 </div>

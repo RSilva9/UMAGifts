@@ -82,7 +82,7 @@ h2, h4, h5, li {
   font-family: "Ubuntu Condensed", sans-serif;
   font-weight: 400;
   font-size: 1.1em;
-  text-align: start;
+  text-align: center;
   padding: 0px 50px;
 }
 .popup img {
@@ -507,11 +507,7 @@ h2, h4, h5, li {
     grid-template-rows: auto;
     grid-gap: 1rem;
   }
-  .popup h2 {
-    text-align: center;
-  }
   .popup h3 {
-    text-align: start;
     padding: 0px;
   }
   .longCard {
