@@ -11,6 +11,7 @@ let btnInfo = document.getElementById("btnHelp")
 let offCanvasCaja = document.getElementById("offCanvasCaja")
 let offCanvasVinos = document.getElementById("offCanvasVinos")
 let offCanvasDelis = document.getElementById("offCanvasDelis")
+let offCanvasPrecio = document.getElementById("offCanvasPrecio")
 
 var checkeadas = []
 
@@ -19,9 +20,12 @@ const limitD = 34
 var suma = 0
 var vinoCant = 0
 var chDelis = 0
+var precioCaja = 0
+var precioVino = 0
+var precioDeli = 0
 
 async function getStock(){
-    const response = await fetch("./json/productos.json")
+    const response = await fetch("../json/productos.json")
     return response.json();
 }
 
@@ -41,7 +45,8 @@ const cajaFinal = {
     },
     img: "",
     cantidad: 0,
-    codigo: 0
+    codigo: 0,
+    precioFinal: 0
 }
 
 const cajasFinales = (JSON.parse(localStorage.getItem('cajas')) || []);
@@ -148,13 +153,20 @@ function listener(cajas, vinos, delics){
                 cajaFinal.bebida.vinoDos = ""
                 acItemDos.parentElement.classList.remove("d-none")
                 acItemDos.classList.add("show")
+                precioVino = 0
+                precioDeli = 0
 
                 offCanvasCaja.innerHTML =
                 `
                 <h3 class="me-1 fw-bold">Estuche:</h3>
                 <h3> ${cajaFinal.estuche}<h3>
                 `
-
+                prodStock.forEach(p=>{
+                    if(p.nombre == c.parentElement.childNodes[5].textContent){
+                        precioCaja = 0
+                        precioCaja += p.precio
+                    }
+                })
             }
             checker(cajas)
             for(let v of vinos){
@@ -164,6 +176,20 @@ function listener(cajas, vinos, delics){
 
             btnEnd.classList.remove("animate__bounceIn")
             btnEnd.classList.add("animate__bounceOut")
+
+            cajaFinal.precioFinal = 0          
+            offCanvasPrecio.innerHTML = ""
+            offCanvasVinos.innerHTML = ""
+            offCanvasDelis.innerHTML = ""
+
+            cajaFinal.deli.deliUno = ""
+            cajaFinal.deli.deliDos = ""
+            cajaFinal.deli.deliTres = ""
+            cajaFinal.deli.deliCuatro = ""
+            offCanvasDelis.innerHTML = ""
+            for(let i=0; i<deliArr.length; i+=1){
+                deliArr[i] = ""
+            }
         })
     }
 
@@ -180,8 +206,20 @@ function listener(cajas, vinos, delics){
                         checkeadas.push(v)
                         if(cajaFinal.bebida.vinoUno == ""){
                             cajaFinal.bebida.vinoUno = v.parentElement.childNodes[5].textContent
+                            
+                            prodStock.forEach(p=>{
+                                if(p.nombre == v.parentElement.childNodes[5].textContent){
+                                    precioVino = 0
+                                    precioVino += p.precio
+                                }
+                            })
                         }else{
                             cajaFinal.bebida.vinoDos = v.parentElement.childNodes[5].textContent
+                            prodStock.forEach(p=>{
+                                if(p.nombre == v.parentElement.childNodes[5].textContent){
+                                    precioVino += p.precio
+                                }
+                            })
                         }
 
                         if(checkeadas.length == 1){
@@ -198,9 +236,21 @@ function listener(cajas, vinos, delics){
                         cajaFinal.bebida.vinoUno = v.parentElement.childNodes[5].textContent
                         acItemTres.parentElement.classList.add("d-none")
                         acItemTres.classList.remove("show")
+                        prodStock.forEach(p=>{
+                            if(p.nombre == v.parentElement.childNodes[5].textContent){
+                                precioVino = 0
+                                precioVino += p.precio
+                            }
+                        })
+                        cajaFinal.precioFinal = precioCaja + precioVino
+                        
+                        offCanvasPrecio.innerHTML =
+                        `
+                        <h3 class="offcanvas-title">Precio: $${cajaFinal.precioFinal}</h3>
+                        `
+
 
                         vinoCant = 0
-
                         cajaFinal.img = "./img/icons/Simple.webp"
 
                         btnEnd.classList.remove("animate__bounceOut")
@@ -214,6 +264,8 @@ function listener(cajas, vinos, delics){
                         <h3>${cajaFinal.bebida.vinoUno}</h3>
                         </div>
                         `
+                        
+                        
                     }
                 }else{
                     v.checked = false
@@ -236,6 +288,13 @@ function listener(cajas, vinos, delics){
                     btnEnd.classList.remove("animate__bounceOut")
                     btnEnd.classList.remove("d-none")
                     btnEnd.classList.add("animate__bounceIn")
+
+                    cajaFinal.precioFinal = precioCaja + precioVino
+                        
+                    offCanvasPrecio.innerHTML =
+                    `
+                    <h3 class="offcanvas-title">Precio: $${cajaFinal.precioFinal}</h3>
+                    `
                 }
             }else{
                 checkeadas.pop(v)
@@ -250,11 +309,13 @@ function listener(cajas, vinos, delics){
                     <h3>${cajaFinal.bebida.vinoUno}</h3>
                     </div>
                     `
+                    offCanvasPrecio.innerHTML = ""
                 }
                 if(checkeadas.length == 0){
                     acItemTres.parentElement.classList.add("d-none")
                     acItemTres.classList.remove("show")
                     offCanvasVinos.innerHTML = ""
+                    offCanvasPrecio.innerHTML = ""
                 }
 
                 if(cajaFinal.bebida.vinoDos == v.parentElement.childNodes[5].textContent){
@@ -265,6 +326,11 @@ function listener(cajas, vinos, delics){
                     cajaFinal.bebida.vinoDos = ""
                 }
 
+                prodStock.forEach(p=>{
+                    if(p.nombre == v.parentElement.childNodes[5].textContent){
+                        precioVino -= p.precio
+                    }
+                })
                 btnEnd.classList.remove("animate__bounceIn")
                 btnEnd.classList.add("animate__bounceOut")
             }
@@ -277,6 +343,9 @@ function listener(cajas, vinos, delics){
             for(let i=0; i<deliArr.length; i+=1){
                 deliArr[i] = ""
             }
+            chDelis = 0
+            precioDeli = 0
+
             for(let d of delics){
                 d.parentElement.classList.remove("cardColorCheck")
                 d.checked = false
@@ -311,14 +380,17 @@ function listener(cajas, vinos, delics){
                     if(deliArr[2] == ""){
                         deliArr[2] = d.parentElement.childNodes[5].textContent
                         cajaFinal.deli.deliTres = d.parentElement.childNodes[5].textContent
-
                     }else
                     if(deliArr[3] == ""){
                         deliArr[3] = d.parentElement.childNodes[5].textContent
                         cajaFinal.deli.deliCuatro = d.parentElement.childNodes[5].textContent
-
                     }
                     chDelis += 1
+                    prodStock.forEach(p=>{
+                        if(p.nombre == d.parentElement.childNodes[5].textContent){
+                            precioDeli += p.precio
+                        }
+                    })
                 }
             }else{
                 if(deliArr[3] == d.parentElement.childNodes[5].textContent){
@@ -350,16 +422,24 @@ function listener(cajas, vinos, delics){
                     cajaFinal.deli.deliDos = cajaFinal.deli.deliTres
                     cajaFinal.deli.deliTres = cajaFinal.deli.deliCuatro
                     cajaFinal.deli.deliCuatro = ""
+                    offCanvasDelis.innerHTML = ""
                 }
             
                 d.parentElement.classList.remove("cardColorCheck")
                 suma -= Number(d.parentElement.dataset.size)
                 chDelis -= 1
+                prodStock.forEach(p=>{
+                    if(p.nombre == d.parentElement.childNodes[5].textContent){
+                        precioDeli -= p.precio
+                    }
+                })
             }
 
             switch(chDelis){
                 case 0:{
                     offCanvasDelis.innerHTML = ""
+
+                    offCanvasPrecio.innerHTML = ""
                     break;
                 }
                 case 1:{
@@ -373,6 +453,9 @@ function listener(cajas, vinos, delics){
                     
                     btnEnd.classList.remove("animate__bounceIn")
                     btnEnd.classList.add("animate__bounceOut")
+
+                    offCanvasPrecio.innerHTML = ""
+
                     break;
                 }
                 case 2:{
@@ -389,6 +472,13 @@ function listener(cajas, vinos, delics){
                     btnEnd.classList.remove("animate__bounceOut")
                     btnEnd.classList.remove("d-none")
                     btnEnd.classList.add("animate__bounceIn")
+
+                    cajaFinal.precioFinal = precioCaja + precioVino + precioDeli
+                        
+                    offCanvasPrecio.innerHTML =
+                    `
+                    <h3 class="offcanvas-title">Precio: $${cajaFinal.precioFinal}</h3>
+                    `
                     break;
                 }
                 case 3:{
@@ -400,6 +490,13 @@ function listener(cajas, vinos, delics){
                     <h3>○ ${cajaFinal.deli.deliDos}</h3>
                     <h3>○ ${cajaFinal.deli.deliTres}</h3>
                     </div>
+                    `
+
+                    cajaFinal.precioFinal = precioCaja + precioVino + precioDeli
+                        
+                    offCanvasPrecio.innerHTML =
+                    `
+                    <h3 class="offcanvas-title">Precio: $${cajaFinal.precioFinal}</h3>
                     `
                     break;
                 }
@@ -414,9 +511,17 @@ function listener(cajas, vinos, delics){
                     <h3>○ ${cajaFinal.deli.deliCuatro}</h3>
                     </div>
                     `
+
+                    cajaFinal.precioFinal = precioCaja + precioVino + precioDeli
+                        
+                    offCanvasPrecio.innerHTML =
+                    `
+                    <h3 class="offcanvas-title">Precio: $${cajaFinal.precioFinal}</h3>
+                    `
                     break;
                 }
             }
+
         })
     }
 }
@@ -424,6 +529,7 @@ function listener(cajas, vinos, delics){
 (btnEnd.childNodes[1]).onclick = async ()=>{
     const {value: cantidad} = await Swal.fire({
         title: '¿Cuántas BOX querés agregar al carrito?',
+        html: `<h3>Precio final de tu BOX: $${cajaFinal.precioFinal}</h3>`,
         input: 'number',
         confirmButtonColor: '#9ebc4a',
         confirmButtonText: 'Agregar al carrito',
@@ -462,14 +568,12 @@ btnHelp.onclick = ()=>{
     if(window.screen.width > 425){
         Swal.fire({
             width: 1000,
-            height: 720,
             html: '<img src="./img/infoCustomBox.webp" width="100%" height="100%" alt="">',
             showConfirmButton: false
         })
     }else{
         Swal.fire({
             width: 1000,
-            height: 720,
             html: '<img src="./img/infoCustomBoxMobile.webp" width="100%" height="100%" alt="">',
             showConfirmButton: false
         })

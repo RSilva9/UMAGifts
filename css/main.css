@@ -22,7 +22,7 @@ footer {
   align-items: flex-start;
   flex-wrap: wrap;
   padding: 15px 0px;
-  background-image: url("/img/footer.webp");
+  background-image: url("../img/footer.webp");
   margin-top: auto;
 }
 footer a {
@@ -328,7 +328,7 @@ h2, h4, h5, li {
   justify-content: center;
   align-items: center;
   flex-wrap: nowrap;
-  background: url("/img/test.webp");
+  background: url("../img/test.webp");
   width: 100%;
   min-height: 20vh;
   padding: 15px;
@@ -439,6 +439,18 @@ h2, h4, h5, li {
 }
 #botonesIndex a:hover {
   background-color: #88466f;
+}
+
+#btnWhatsapp {
+  background-color: green;
+  position: fixed;
+  right: 15px;
+  border-radius: 15%;
+  z-index: 999;
+}
+#btnWhatsapp img {
+  padding: 5px;
+  width: 70px;
 }
 
 @media (max-width: 525px) {
@@ -564,6 +576,9 @@ h2, h4, h5, li {
   }
   #botonesIndex a h2 {
     align-self: center;
+  }
+  #btnWhatsapp img {
+    width: 50px;
   }
 }
 @media screen and (min-width: 425px) and (max-width: 767px) {

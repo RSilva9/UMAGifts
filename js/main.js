@@ -2,7 +2,7 @@ let container = document.querySelector("#cardCont")
 const boxArmadas = (JSON.parse(localStorage.getItem('armadas')) || [])
 
 async function getStock() {
-    const response = await fetch("./json/box.json")
+    const response = await fetch("../json/box.json")
     return response.json();
 }
 

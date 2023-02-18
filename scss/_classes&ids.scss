@@ -221,7 +221,7 @@
 
 #containerMap{
     @include flex(row, center, center, nowrap);
-    background: url("/img/test.webp");
+    background: url("../img/test.webp");
     width: 100%;
     min-height: 20vh;
     padding: 15px;
@@ -303,5 +303,17 @@
     }
     a:hover{
         background-color: #88466f;
+    }
+}
+
+#btnWhatsapp{
+    background-color: green;
+    position: fixed;
+    right: 15px;
+    border-radius: 15%;
+    z-index: 999;
+    img{
+        padding: 5px;
+        width: 70px;
     }
 }

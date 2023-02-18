@@ -18,7 +18,7 @@ let lista = ``
 let precioTotal = 0
 
 async function getStock() {
-    const response = await fetch("./json/box.json")
+    const response = await fetch("../json/box.json")
     return response.json();
 }
 
@@ -34,6 +34,36 @@ if(localStorage.getItem("armadas") || localStorage.getItem("cajas")){
     carritoVacio()
 }
 
+if(window.screen.width > 425){
+    Swal.fire({
+        width: 1000,
+        html: '<img src="./img/infoCarrito.webp" width="100%" height="100%" alt="">',
+        showConfirmButton: false
+    })
+}else{
+    Swal.fire({
+        width: 1000,
+        html: '<img src="./img/infoCarritoMobile.webp" width="100%" height="100%" alt="">',
+        showConfirmButton: false
+    })
+}
+
+btnHelp.onclick = ()=>{
+    if(window.screen.width > 425){
+        Swal.fire({
+            width: 1000,
+            html: '<img src="./img/infoCarrito.webp" width="100%" height="100%" alt="">',
+            showConfirmButton: false
+        })
+    }else{
+        Swal.fire({
+            width: 1000,
+            html: '<img src="./img/infoCarritoMobile.webp" width="100%" height="100%" alt="">',
+            showConfirmButton: false
+        })
+    }
+}
+
 function renderCarro() {
     lista = ``
     precioTotal = 0
@@ -45,7 +75,7 @@ function renderCarro() {
                 divBox.innerHTML =
                     `
                 <div class="longCard">
-                    <div class="d-flex flex-row flex-grow-1" id="cell">
+                    <div class="d-flex flex-row" id="cell">
                         <img src=${caja.img} alt="Box personalizada">
                         <div class="d-flex flex-column">
                             <h3>Estuche: ${caja.estuche}</h3>
@@ -79,8 +109,8 @@ function renderCarro() {
                     </div>
                     <div class="d-flex flex-row mt-2">
                         <div class="d-flex flex-column align-items-center me-2">
-                            <h3>Precio:</h3>
-                            <h3>$${caja.precio}</h3>
+                            <h3>Precio por unidad:</h3>
+                            <h3>$${caja.precioFinal}</h3>
                         </div>
                         <div class="d-flex flex-column align-items-center">
                             <h3>Cantidad:</h3>
@@ -95,8 +125,8 @@ function renderCarro() {
                 </div>
                 `
 
-                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} || ${caja.deli.deliUno}, ${caja.deli.deliDos}, ${caja.deli.deliTres}, ${caja.deli.deliCuatro} /// CANTIDAD: ${caja.cantidad} /// PRECIO: $${caja.precio}\n\n`
-                precioTotal += caja.precio*caja.cantidad
+                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} || ${caja.deli.deliUno}, ${caja.deli.deliDos}, ${caja.deli.deliTres}, ${caja.deli.deliCuatro} /// CANTIDAD: ${caja.cantidad} /// PRECIO: $${caja.precioFinal}\n\n`
+                precioTotal += caja.precioFinal*caja.cantidad
             } else {
                 divBox.innerHTML =
                     `
@@ -116,8 +146,8 @@ function renderCarro() {
                 </div>
                 <div class="d-flex flex-row mt-2">
                     <div class="d-flex flex-column align-items-center me-2">
-                        <h3>Precio:</h3>
-                        <h3>$${caja.precio}</h3>
+                        <h3>Precio por unidad:</h3>
+                        <h3>$${caja.precioFinal}</h3>
                     </div>
                     <div class="d-flex flex-column align-items-center">
                         <h3>Cantidad:</h3>
@@ -132,8 +162,8 @@ function renderCarro() {
             </div>
             `
 
-                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} /// CANTIDAD: ${caja.cantidad} /// PRECIO: $${caja.precio}\n\n`
-                precioTotal += caja.precio*caja.cantidad
+                lista += `• Box personalizada: ${caja.estuche} || ${caja.bebida.vinoUno}, ${caja.bebida.vinoDos} /// CANTIDAD: ${caja.cantidad} /// PRECIO: $${caja.precioFinal}\n\n`
+                precioTotal += caja.precioFinal*caja.cantidad
             }
 
 
@@ -154,7 +184,7 @@ function renderCarro() {
                     divBox.innerHTML =
                         `
                     <div class="longCard">
-                        <div class="d-flex flex-row flex-grow-1 pb-1 w-100" id="cell">
+                        <div class="d-flex flex-row pb-1 flex-grow-1" id="cell">
                             <img src=${prod.img} alt="Box prearmada">
                             <div class="m-2 flex-grow-1">
                                 <h3>${prod.codigo}: BOX de ${prod.tipo} ${prod.tam}</h3>
@@ -168,7 +198,7 @@ function renderCarro() {
                         </div>
                         <div class="d-flex flex-row mt-2">
                             <div class="d-flex flex-column align-items-center me-2">
-                                <h3>Precio:</h3>
+                                <h3>Precio por unidad:</h3>
                                 <h3>$${arm.precio}</h3>
                             </div>
                             <div class="d-flex flex-column align-items-center">

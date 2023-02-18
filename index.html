@@ -20,7 +20,7 @@
 
     <div id="franjaTop">
         <a class="navbar-brand" href="index.html">
-            <img src="img/logoUMAv2_sinFondo.png" alt="Logo UMA">
+            <img src="./img/logoUMAv2_sinFondo.png" alt="Logo UMA">
         </a>
     </div>
 
@@ -107,6 +107,11 @@
         </header>
 
         <h1 class="text-center m-4">Regalos empresariales, vinos, espumantes y productos gourmet</h1>
+
+
+        <a id="btnWhatsapp" href="https://api.whatsapp.com/send/?phone=5491165325333&text=¡Hola%21+Me+gustaría+realizar+un+pedido.&type=phone_number&app_absent=0">
+            <img src="img/icons/whatsappWhite.webp" alt="">
+        </a>
 
         <div id="carouselExample" class="carousel slide">
             <div class="carousel-inner myCarousel">
@@ -227,15 +232,17 @@
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
     <script type="module">
+
         const cell1 = document.getElementById("cell1")
         const cell2 = document.getElementById("cell2")
         const cell3 = document.getElementById("cell3")
         const cell4 = document.getElementById("cell4")
 
         async function getStock() {
-            const response = await fetch("./json/boxFondo.json")
+            const  response = await fetch('/json/boxFondo.json')
             return response.json();
         }
+        
         const boxStock = await getStock()
         
         for(let i=0; i<2; i+=1){

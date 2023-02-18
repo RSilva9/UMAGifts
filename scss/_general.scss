@@ -18,7 +18,7 @@ nav{
 footer{
     @include flex(row, space-around, flex-start, wrap);
     padding: 15px 0px;
-    background-image: url("/img/footer.webp");
+    background-image: url("../img/footer.webp");
     margin-top: auto;
     a{
         color: white;
