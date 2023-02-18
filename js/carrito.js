@@ -48,22 +48,6 @@ if(window.screen.width > 425){
     })
 }
 
-btnHelp.onclick = ()=>{
-    if(window.screen.width > 425){
-        Swal.fire({
-            width: 1000,
-            html: '<img src="./img/infoCarrito.webp" width="100%" height="100%" alt="">',
-            showConfirmButton: false
-        })
-    }else{
-        Swal.fire({
-            width: 1000,
-            html: '<img src="./img/infoCarritoMobile.webp" width="100%" height="100%" alt="">',
-            showConfirmButton: false
-        })
-    }
-}
-
 function renderCarro() {
     lista = ``
     precioTotal = 0
