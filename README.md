@@ -81,3 +81,9 @@ Updates:
   - Nuevos botones de navegación agregados a index.
   - Nueva pantalla con todos los productos.
   - Nombre de la pantalla "Productos" cambiado a "BOX prearmadas".
+
+**18/02/23**
+  - Nuevos productos gourmet agregados.
+  - Precios de todos los productos y BOX cargados.
+  - Sumador de precios creado.
+  - Carrito con precios 100% funcional.
