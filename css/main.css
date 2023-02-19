@@ -556,7 +556,7 @@ h2, h4, h5, li {
     width: 70%;
   }
   .hiddenCarousel {
-    display: block;
+    display: inline-block;
   }
   .mainCarousel {
     display: none;
