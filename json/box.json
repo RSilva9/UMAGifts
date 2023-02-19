@@ -1,7 +1,7 @@
 [
     {
         "codigo": "101",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
         "img": "./img/box/box101.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -10,7 +10,7 @@
     },
     {
         "codigo": "102",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 D.V. CATENA Malbec</h3><h3>+1 Luigi Bosca Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 D.V. CATENA Malbec</h3><h3>+1 Luigi Bosca Malbec</h3></div>",
         "img": "./img/box/box102.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -19,7 +19,7 @@
     },
     {
         "codigo": "103",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 D.V. CATENA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 D.V. CATENA Malbec</h3></div>",
         "img": "./img/box/box103.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -28,7 +28,7 @@
     },
     {
         "codigo": "104",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 TRUMPETER Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 TRUMPETER Malbec</h3></div>",
         "img": "./img/box/box104.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -37,7 +37,7 @@
     },
     {
         "codigo": "105",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
         "img": "./img/box/box105.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -46,7 +46,7 @@
     },
     {
         "codigo": "106",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 LUGI BOSCA</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 LUGI BOSCA</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
         "img": "./img/box/box106.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -55,7 +55,7 @@
     },
     {
         "codigo": "107",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 D.V. CATENA Malbec Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 D.V. CATENA Malbec Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
         "img": "./img/box/box107.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -64,7 +64,7 @@
     },
     {
         "codigo": "108",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
         "img": "./img/box/box108.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -73,7 +73,7 @@
     },
     {
         "codigo": "109",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 TRUMPETER Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 TRUMPETER Malbec</h3><h3>+1 Dip del bosque con Hongos al Malbec</h3><h3>+1 Chutney de moras al Malbec</h3><h3>+1 Pasta de aceitunas negras</h3><h3>+1 Pavita deshuesada en escabeche</h3></div>",
         "img": "./img/box/box109.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -82,7 +82,7 @@
     },
     {
         "codigo": "110",
-        "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 LUIGI BOSCA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 LUIGI BOSCA Malbec</h3></div>",
         "img": "./img/box/box110.webp",
         "tipo": "carton",
         "tam": "doble",
@@ -91,7 +91,7 @@
     },
     {
         "codigo": "111",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 RUTINI Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA SIMPLE</h2><h3>+1 RUTINI Malbec</h3></div>",
         "img": "./img/box/box111.webp",
         "tipo": "madera",
         "tam": "simple",
@@ -109,7 +109,7 @@
     },
     {
         "codigo": "113",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA SIMPLE</h2><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
         "img": "./img/box/box113.webp",
         "tipo": "madera",
         "tam": "simple",
@@ -118,7 +118,7 @@
     },
     {
         "codigo": "114",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 NIETO SENETINER Extra Brut</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA SIMPLE</h2><h3>+1 NIETO SENETINER Extra Brut</h3></div>",
         "img": "./img/box/box114.webp",
         "tipo": "madera",
         "tam": "simple",
@@ -127,7 +127,7 @@
     },
     {
         "codigo": "115",
-        "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN SIMPLE</h2><h3>+1 RUTINI Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN SIMPLE</h2><h3>+1 RUTINI Malbec</h3></div>",
         "img": "./img/box/box115.webp",
         "tipo": "carton",
         "tam": "simple",
@@ -136,7 +136,7 @@
     },
     {
         "codigo": "116",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 SALENTEIN Malbec</h3><h3>+1 Mermelada de arándanos orgánicos - Estancia Las Quinas (Sin T.A.C)</h3><h3>+1 Cebollas al Malbec - Juliana López May</h3><h3>+1 Mermelada orgánica de Saúco - Cuyen</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 SALENTEIN Malbec</h3><h3>+1 Mermelada de arándanos orgánicos - Estancia Las Quinas (Sin T.A.C)</h3><h3>+1 Cebollas al Malbec - Juliana López May</h3><h3>+1 Mermelada orgánica de Saúco - Cuyen</h3></div>",
         "img": "./img/box/box116.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -145,7 +145,7 @@
     },
     {
         "codigo": "117",
-        "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 DV CATENA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN DOBLE</h2><h3>+1 RUTINI Malbec</h3><h3>+1 DV CATENA Malbec</h3></div>",
         "img": "./img/box/box117.webp",
         "tipo": "carton",
         "tam": "doble",
@@ -154,7 +154,7 @@
     },
     {
         "codigo": "118",
-        "text": "<div class=\"popup\"><h2>BOLSA DE CARTÓN</h2><h3>+1 RUTINI Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN</h2><h3>+1 RUTINI Malbec</h3></div>",
         "img": "./img/box/box118.webp",
         "tipo": "bolsa",
         "tam": "simple",
@@ -163,7 +163,7 @@
     },
     {
         "codigo": "119",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 Espumante NIETO SENETINER EXTRA BRUT</h3><h3>+1 Sidra 1888</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 Espumante NIETO SENETINER EXTRA BRUT</h3><h3>+1 Sidra 1888</h3></div>",
         "img": "./img/box/box119.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -172,7 +172,7 @@
     },
     {
         "codigo": "120",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 TRUMPETER Malbec</h3><h3>+1 Pasta de aceitunas negras - Terra Sana</h3><h3>+1 Berenjenas en escabeche - Famiglia Gullo</h3><h3>+1 Nueces duradas mariposas ámbar - El Castaño</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 TRUMPETER Malbec</h3><h3>+1 Pasta de aceitunas negras - Terra Sana</h3><h3>+1 Berenjenas en escabeche - Famiglia Gullo</h3><h3>+1 Nueces duradas mariposas ámbar - El Castaño</h3></div>",
         "img": "./img/box/box120.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -181,7 +181,7 @@
     },
     {
         "codigo": "121",
-        "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN SIMPLE</h2><h3>+1 TRUMPETER Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN SIMPLE</h2><h3>+1 TRUMPETER Malbec</h3></div>",
         "img": "./img/box/box121.webp",
         "tipo": "carton",
         "tam": "simple",
@@ -190,7 +190,7 @@
     },
     {
         "codigo": "122",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 Aceitunas verdes rellenas con morrón - Nucete</h3><h3>+1 Aceitunas negras en salmuera - Nucete</h3><h3>+1 Dip del bosque con hongos al malbec - Valleverde</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA DOBLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3><h3>+1 Aceitunas verdes rellenas con morrón - Nucete</h3><h3>+1 Aceitunas negras en salmuera - Nucete</h3><h3>+1 Dip del bosque con hongos al malbec - Valleverde</h3></div>",
         "img": "./img/box/box122.webp",
         "tipo": "madera",
         "tam": "doble",
@@ -199,7 +199,7 @@
     },
     {
         "codigo": "123",
-        "text": "<div class=\"popup\"><h2>BOLSA DE CARTÓN</h2><h3>+ 1 SALENTEIN RESERVA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>BOLSA DE CARTÓN</h2><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
         "img": "./img/box/box123.webp",
         "tipo": "bolsa",
         "tam": "simple",
@@ -208,7 +208,7 @@
     },
     {
         "codigo": "124",
-        "text": "<div class=\"popup\"><h2>CAJA DE MADERA SIMPLE</h2><h3>+1 D.V. CATENA Malbec Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA SIMPLE</h2><h3>+1 D.V. CATENA Malbec Malbec</h3></div>",
         "img": "./img/box/box124.webp",
         "tipo": "madera",
         "tam": "simple",
@@ -217,11 +217,38 @@
     },
     {
         "codigo": "125",
-        "text": "<div class=\"popup\"><h2>CAJA DE CARTÓN SIMPLE</h2><h3>+1 LUIGI BOSCA Malbec</h3></div>",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN SIMPLE</h2><h3>+1 LUIGI BOSCA Malbec</h3></div>",
         "img": "./img/box/box125.webp",
         "tipo": "carton",
         "tam": "simple",
         "deli": false,
         "precio": 4123
+    },
+    {
+        "codigo": "126",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE MADERA SIMPLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3></div>",
+        "img": "./img/box/box126.webp",
+        "tipo": "madera",
+        "tam": "simple",
+        "deli": false,
+        "precio": 4577
+    },
+    {
+        "codigo": "127",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN SIMPLE</h2><h3>+1 ESCORIHUELA GASCÓN Malbec</h3></div>",
+        "img": "./img/box/box127.webp",
+        "tipo": "carton",
+        "tam": "simple",
+        "deli": false,
+        "precio": 3433
+    },
+    {
+        "codigo": "128",
+        "text": "<div class=\"popup\"><h2>ESTUCHE DE CARTÓN SIMPLE</h2><h3>+1 SALENTEIN RESERVA Malbec</h3></div>",
+        "img": "./img/box/box128.webp",
+        "tipo": "carton",
+        "tam": "simple",
+        "deli": false,
+        "precio": 3668
     }
 ]
