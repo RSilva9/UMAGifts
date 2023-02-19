@@ -189,7 +189,7 @@
         "codigo": 314,
         "img": "./img/productos/deli/berenjEscab2.webp",
         "tipo": "deli",
-        "size": "13",
+        "size": "12",
         "precio": 795
     },
     {
@@ -197,7 +197,7 @@
         "codigo": 315,
         "img": "./img/productos/deli/pavitaRegGrande.webp",
         "tipo": "deli",
-        "size": "19",
+        "size": "12",
         "precio": 1659
     },
     {
@@ -205,7 +205,7 @@
         "codigo": 316,
         "img": "./img/productos/deli/tapenade.webp",
         "tipo": "deli",
-        "size": "19",
+        "size": "8",
         "precio": 1134
     },
     {
@@ -213,7 +213,7 @@
         "codigo": 317,
         "img": "./img/productos/deli/cebCaram.webp",
         "tipo": "deli",
-        "size": "19",
+        "size": "12",
         "precio": 795
     }
 ]
