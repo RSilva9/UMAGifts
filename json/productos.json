@@ -7,53 +7,53 @@
         "precio": 5925
     },
     {
-        "nombre": "Sidra 1888 Saenz Briones",
+        "nombre": "Rutini - Malbec",
         "codigo": 102,
-        "img": "./img/productos/vinos/sidra1888.webp",
+        "img": "./img/productos/vinos/vinoRutini.webp",
         "tipo": "bebida",
-        "precio": 1500
+        "precio": 6682
     },
     {
-        "nombre": "Nieto Senetiner",
+        "nombre": "Luigi Bosca - Malbec",
         "codigo": 103,
-        "img": "./img/productos/vinos/espumNieto.webp",
+        "img": "./img/productos/vinos/vinoLuigi.webp",
         "tipo": "bebida",
-        "precio": 2550
+        "precio": 3000
+    },
+    {
+        "nombre": "Salentein Reserva - Malbec",
+        "codigo": 104,
+        "img": "./img/productos/vinos/vinoSalentein.webp",
+        "tipo": "bebida",
+        "precio": 2370
     },
     {
         "nombre": "Trumpeter - Malbec",
-        "codigo": 104,
+        "codigo": 105,
         "img": "./img/productos/vinos/vinoTrumpeter.webp",
         "tipo": "bebida",
         "precio": 2235
     },
     {
         "nombre": "Escorihuela Gascón - Malbec",
-        "codigo": 105,
+        "codigo": 106,
         "img": "./img/productos/vinos/vinoEscorihuela.webp",
         "tipo": "bebida",
         "precio": 2146
     },
     {
-        "nombre": "Salentein Reserva - Malbec",
-        "codigo": 106,
-        "img": "./img/productos/vinos/vinoSalentein.webp",
-        "tipo": "bebida",
-        "precio": 2370
-    },
-    {
-        "nombre": "Luigi Bosca - Malbec",
+        "nombre": "Nieto Senetiner",
         "codigo": 107,
-        "img": "./img/productos/vinos/vinoLuigi.webp",
+        "img": "./img/productos/vinos/espumNieto.webp",
         "tipo": "bebida",
-        "precio": 3000
+        "precio": 2550
     },
     {
-        "nombre": "Rutini - Malbec",
+        "nombre": "Sidra 1888 Saenz Briones",
         "codigo": 108,
-        "img": "./img/productos/vinos/vinoRutini.webp",
+        "img": "./img/productos/vinos/sidra1888.webp",
         "tipo": "bebida",
-        "precio": 6682
+        "precio": 1500
     },
     {
         "nombre": "Bolsa de cartón",
@@ -215,5 +215,13 @@
         "tipo": "deli",
         "size": "12",
         "precio": 795
+    },
+    {
+        "nombre": "Nueces ámbar doradas 100gr",
+        "codigo": 318,
+        "img": "./img/productos/deli/nueces.webp",
+        "tipo": "deli",
+        "size": "10",
+        "precio": 390
     }
 ]
