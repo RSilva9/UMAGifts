@@ -69,7 +69,7 @@
         "img": "./img/productos/estuches/cartonSimple.webp",
         "tipo": "estuche",
         "tam": "simple",
-        "precio": 981
+        "precio": 1121
     },
     {
         "nombre": "Estuche de cartón doble",
@@ -77,7 +77,7 @@
         "img": "./img/productos/estuches/cartonDoble.webp",
         "tipo": "estuche",
         "tam": "doble",
-        "precio": 1343
+        "precio": 1533
     },
     {
         "nombre": "Estuche de madera simple",
@@ -85,7 +85,7 @@
         "img": "./img/productos/estuches/maderaSimple.webp",
         "tipo": "estuche",
         "tam": "simple",
-        "precio": 2070
+        "precio": 2210
     },
     {
         "nombre": "Estuche de madera doble",
@@ -93,7 +93,7 @@
         "img": "./img/productos/estuches/maderaDoble.webp",
         "tipo": "estuche",
         "tam": "doble",
-        "precio": 2616
+        "precio": 2826
     },
     {
         "nombre": "Berenjenas en escabeche 360gr - Famiglia Gullo",

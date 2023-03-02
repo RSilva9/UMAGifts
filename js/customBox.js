@@ -540,8 +540,10 @@ function listener(cajas, vinos, delics){
         }
     })
     if(cantidad){
+        var min = 1
+        var max = 500
         cajaFinal.cantidad = cantidad
-        cajaFinal.codigo = Math.random()
+        cajaFinal.codigo = Math.floor(Math.random()*(max-min+1)+min)
         cajasFinales.push(cajaFinal)
         localStorage.setItem("cajas", JSON.stringify(cajasFinales))
         
