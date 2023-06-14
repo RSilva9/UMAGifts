@@ -396,14 +396,12 @@ function listener(cajas, vinos, delics){
                 if(deliArr[3] == d.parentElement.childNodes[5].textContent){
                     deliArr[3] = ""
                     cajaFinal.deli.deliCuatro = ""
-
                 }else
                 if(deliArr[2] == d.parentElement.childNodes[5].textContent){
                     deliArr[2] = deliArr[3]
                     deliArr[3] = ""
                     cajaFinal.deli.deliTres = cajaFinal.deli.deliCuatro
                     cajaFinal.deli.deliCuatro = ""
-
                 }else
                 if(deliArr[1] == d.parentElement.childNodes[5].textContent){
                     deliArr[1] = deliArr[2]
@@ -433,6 +431,12 @@ function listener(cajas, vinos, delics){
                         precioDeli -= p.precio
                     }
                 })
+            }
+            
+            if(suma >= 32){
+                btnEnd.classList.remove("animate__bounceOut")
+                btnEnd.classList.remove("d-none")
+                btnEnd.classList.add("animate__bounceIn")
             }
 
             switch(chDelis){
@@ -469,16 +473,17 @@ function listener(cajas, vinos, delics){
                     `
                     
                     cajaFinal.img = "./img/icons/DobleDeli.webp"
-                    btnEnd.classList.remove("animate__bounceOut")
-                    btnEnd.classList.remove("d-none")
-                    btnEnd.classList.add("animate__bounceIn")
 
                     cajaFinal.precioFinal = precioCaja + precioVino + precioDeli
-                        
+                    
                     offCanvasPrecio.innerHTML =
                     `
                     <h3 class="offcanvas-title">Precio: $${cajaFinal.precioFinal}</h3>
                     `
+                    if(!d.checked){
+                        btnEnd.classList.remove("animate__bounceIn")
+                        btnEnd.classList.add("animate__bounceOut")
+                    }
                     break;
                 }
                 case 3:{
@@ -491,6 +496,9 @@ function listener(cajas, vinos, delics){
                     <h3>○ ${cajaFinal.deli.deliTres}</h3>
                     </div>
                     `
+                    btnEnd.classList.remove("animate__bounceOut")
+                    btnEnd.classList.remove("d-none")
+                    btnEnd.classList.add("animate__bounceIn")
 
                     cajaFinal.precioFinal = precioCaja + precioVino + precioDeli
                         

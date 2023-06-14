@@ -217,8 +217,16 @@
         "precio": 795
     },
     {
-        "nombre": "Nueces ámbar doradas 100gr",
+        "nombre": "Tomates secos condimentados 180gr - MQA",
         "codigo": 318,
+        "img": "./img/productos/deli/tomatesSecos.webp",
+        "tipo": "deli",
+        "size": "8",
+        "precio": 1393
+    },
+    {
+        "nombre": "Nueces ámbar doradas 100gr",
+        "codigo": 319,
         "img": "./img/productos/deli/nueces.webp",
         "tipo": "deli",
         "size": "10",
